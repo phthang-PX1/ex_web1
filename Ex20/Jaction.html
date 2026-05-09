@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div style="display: flex">
+        <div style="flex:30%">
+            <img src="hinh/Product.jpg" alt="Products Menu" usemap="#product_menu" style="display: block; width: 200px; height: 1200px;">
+            
+            <map name="product_menu">
+                <area shape="rect" coords="0,0,200,100" href="Scantext.htm" target="content_frame" alt="The ScanMaster">
+                <area shape="rect" coords="0,101,200,200" href="Printext.htm" target="content_frame" alt="LaserPrint 5000">
+                <area shape="rect" coords="0,201,200,300" href="PStext.htm" target="content_frame" alt="Print/Scan 150">
+                <area shape="rect" coords="0,301,200,400" href="home.html" target="content_frame" alt="Back to the home page">
+            </map>
+        </div>
+        
+        <div style="flex:70%">
+            <iframe name="content_frame" src="home.html" style="width:100%; height:100%; border:none"></iframe>
+
+        </div>
+    </div>
+</body>
+</html>
