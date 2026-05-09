@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kelsey's Diner - Lunch</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f5f0dc;
+            font-family: Georgia, serif;
+        }
+
+        #header {
+            background-color: black;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        #header h1 {
+            font-family: "Palatino Linotype", Palatino, serif;
+            font-style: italic;
+            color: #00cc44;
+            margin: 0;
+            font-size: 2em;
+        }
+
+        nav {
+            background-color: black;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 8px 0;
+            border-top: 1px solid #444;
+        }
+
+        nav a {
+            text-decoration: none;
+            font-size: 1.2em;
+            font-weight: bold;
+            font-family: Georgia, serif;
+            padding: 4px 20px;
+        }
+
+        nav a.active {
+            color: #00cc44;
+        }
+
+        nav a:not(.active) {
+            color: white;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .content {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 20px 30px;
+        }
+
+        .menu-title {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .menu-title h2 {
+            font-size: 1.4em;
+            font-weight: bold;
+            margin-bottom: 2px;
+        }
+
+        .menu-title p {
+            font-style: italic;
+            font-size: 0.95em;
+            margin: 0;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #999;
+            margin: 12px 0;
+        }
+
+        .menu-item {
+            margin-bottom: 12px;
+        }
+
+        .menu-item .item-name {
+            font-weight: bold;
+            font-size: 1em;
+            display: block;
+            margin-bottom: 2px;
+        }
+
+        .menu-item .item-desc {
+            margin-left: 30px;
+            font-size: 0.95em;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="header">
+        <h1>Kelsey's Diner</h1>
+    </div>
+
+    <nav>
+        <a href="Breakfst.html">Breakfast</a>
+        <a href="Lunch.html" class="active">Lunch</a>
+        <a href="Dinner.html">Dinner</a>
+    </nav>
+
+    <div class="content">
+        <div class="menu-title">
+            <h2>Lunch Menu</h2>
+            <p>Served 11:00 a.m. - 4:00 p.m.</p>
+        </div>
+
+        <hr>
+
+        <div class="menu-item">
+            <span class="item-name">Club Sandwich</span>
+            <span class="item-desc">Triple-decker with turkey, bacon, lettuce, tomato &amp; mayo on toasted white bread. Served with fries. 7.95</span>
+        </div>
+
+        <div class="menu-item">
+            <span class="item-name">Caesar Salad</span>
+            <span class="item-desc">Crisp romaine lettuce tossed with Caesar dressing, croutons &amp; shaved Parmesan cheese. 6.50</span>
+        </div>
+
+        <div class="menu-item">
+            <span class="item-name">Grilled Chicken Sandwich</span>
+            <span class="item-desc">Marinated grilled chicken breast with lettuce, tomato &amp; honey mustard on a toasted bun. Served with coleslaw. 8.25</span>
+        </div>
+
+        <div class="menu-item">
+            <span class="item-name">French Onion Soup</span>
+            <span class="item-desc">Slow-cooked onion soup topped with a thick slice of toasted bread &amp; melted Swiss cheese. 4.75</span>
+        </div>
+
+        <div class="menu-item">
+            <span class="item-name">BLT Wrap</span>
+            <span class="item-desc">Crispy bacon, fresh lettuce &amp; ripe tomato wrapped in a flour tortilla with garlic aioli. 6.95</span>
+        </div>
+
+        <div class="menu-item">
+            <span class="item-name">Diner Burger</span>
+            <span class="item-desc">Half-pound beef patty with cheddar cheese, pickles, onion &amp; Kelsey's special sauce on a brioche bun. Served with fries. 9.50</span>
+        </div>
+
+        <div class="menu-item">
+            <span class="item-name">Tuna Melt</span>
+            <span class="item-desc">Housemade tuna salad with melted cheddar on grilled sourdough bread. Served with a cup of soup. 7.25</span>
+        </div>
+
+        <div class="menu-item">
+            <span class="item-name">Vegetable Pasta</span>
+            <span class="item-desc">Penne pasta tossed with seasonal vegetables, olive oil, garlic &amp; fresh basil. Topped with grated Parmesan. 7.50</span>
+        </div>
+
+    </div>
+
+</body>
+</html>
