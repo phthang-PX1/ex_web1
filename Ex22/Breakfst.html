@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kelsey's Diner - Breakfast</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f5f0dc;
+            font-family: Georgia, serif;
+        }
+
+        #header {
+            background-color: black;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        #header h1 {
+            font-family: "Palatino Linotype", Palatino, serif;
+            font-style: italic;
+            color: #00cc44;
+            margin: 0;
+            font-size: 2em;
+        }
+
+        nav {
+            background-color: black;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 8px 0;
+            border-top: 1px solid #444;
+        }
+
+        nav a {
+            text-decoration: none;
+            font-size: 1.2em;
+            font-weight: bold;
+            font-family: Georgia, serif;
+            padding: 4px 20px;
+        }
+
+        nav a.active {
+            color: #00cc44;
+        }
+
+        nav a:not(.active) {
+            color: white;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .content {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 20px 30px;
+        }
+
+        .menu-title {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .menu-title h2 {
+            font-size: 1.4em;
+            font-weight: bold;
+            margin-bottom: 2px;
+        }
+
+        .menu-title p {
+            font-style: italic;
+            font-size: 0.95em;
+            margin: 0;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #999;
+            margin: 12px 0;
+        }
+
+        .menu-item {
+            margin-bottom: 12px;
+        }
+
+        .menu-item .item-name {
+            font-weight: bold;
+            font-size: 1em;
+            display: block;
+            margin-bottom: 2px;
+        }
+
+        .menu-item .item-desc {
+            margin-left: 30px;
+            font-size: 0.95em;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="header">
+        <h1>Kelsey's Diner</h1>
+    </div>
+
+    <nav>
+        <a href="Breakfst.html" class="active">Breakfast</a>
+        <a href="Lunch.html">Lunch</a>
+        <a href="Dinner.html">Dinner</a>
+    </nav>
+
+    <div class="content">
+        <div class="menu-title">
+            <h2>Breakfast Menu</h2>
+            <p>Served 6:30 a.m. - 11:00 a.m.</p>
+        </div>
+
+        <hr>
+
+        <div class="menu-item">
+            <span class="item-name">Smoked Trout</span>
+            <span class="item-desc">Fluffy scrambled eggs with smoked trout, goat cheese &amp; scallions served with oven-roasted potatoes &amp; toast. 5.45</span>
+        </div>
+
+        <div class="menu-item">
+            <span class="item-name">French Toast</span>
+            <span class="item-desc">Three thick slices of French bread dipped in egg batter and served crisp &amp; golden brown with syrup. 3.25</span>
+        </div>
+
+        <div class="menu-item">
+            <span class="item-name">Belgian Waffle</span>
+            <span class="item-desc">Crisp malt Belgian waffle &amp; syrup. 3.95</span>
+        </div>
+
+        <div class="menu-item">
+            <span class="item-name">Breakfast Fruit Plate</span>
+            <span class="item-desc">Fresh seasonal fruit with yogurt or cottage cheese &amp; Kelsey's famous Bran Muffin. 3.95</span>
+        </div>
+
+        <div class="menu-item">
+            <span class="item-name">Huevos Rancheros</span>
+            <span class="item-desc">Two eggs on a flour tortilla with thick chili sauce, shredded Monterey Jack &amp; homemade salsa. 4.95</span>
+        </div>
+
+        <div class="menu-item">
+            <span class="item-name">Eggs</span>
+            <span class="item-desc">Any style with oven-roasted potatoes &amp; toast. 2.95</span>
+        </div>
+
+        <div class="menu-item">
+            <span class="item-name">Lox &amp; Bagels</span>
+            <span class="item-desc">Nova lox, cream cheese, onion, cucumber &amp; tomatoes. 5.95</span>
+        </div>
+
+    </div>
+
+</body>
+</html>
