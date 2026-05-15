@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Thiết kế trang bonmua</title>
+    <style>
+        /* Định dạng chung cho thẻ p theo hướng dẫn */
+        
+        p {
+            width: 45%; 
+            margin-top: 10px;
+            margin-left: 20px;
+            padding: 10px;
+            box-sizing: border-box; 
+            min-height: flex;
+            font-style: Arial, sans-serif;
+            font-size: 15px;
+            color:#C0C0C0;
+            font-weight: bold;
+            display: inline-block;
+            vertical-align: text-top;
+        }
+
+        
+        .tieu-de {
+            font-size: 20px;
+            font-weight: bold;
+            color: #00F; 
+            display: block;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+        }
+
+        /* ID định dạng màu nền đặc trưng cho 4 mùa */
+        #xuan {
+            background-color: #FF80BF; 
+            color: #800040;
+        }
+
+        #ha {
+            background-color: #FFA500; 
+            color: #663300;
+        }
+
+        #thu {
+            background-color: #FFFF00; 
+            color: #4D4D00;
+        }
+
+        #dong {
+            background-color: #C0C0C0; 
+            color: #333333;
+        }
+
+        /* Clear float để tránh vỡ khung phía dưới nếu cần */
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+    </style>
+</head>
+<body class="clearfix">
+
+    <p id="xuan">
+        <span class="tieu-de">Mùa Xuân</span>
+        Những ngày tháng Chạp, khi đất trời rộn ràng trong tình khúc giao mùa, ta vẫn thường cùng nhau dạo qua những con phố ngày giáp Tết đông đúc người qua lại. Phố những ngày này chẳng xác xơ như khi mùa đông mới ghé, phố cũng tươi tắn, xúng xính trong những sắc màu tươi rói để chờ đón xuân sang.
+    </p>
+
+    <p id="ha">
+        <span class="tieu-de">Mùa Hạ</span>
+        Mưa mùa hạ đến rồi đi bất chợt mang theo không khí mát dịu, trong trẻo xóa tan nắng hè đổ lửa. Kỷ niệm ùa về. Cơn mưa đầu mùa mang đến mùa màng bội thu, nhưng có lúc lại lấy đi đồng lúa đang thì của người nông dân khắc khổ.
+    </p>
+
+    <p id="thu">
+        <span class="tieu-de">Mùa Thu</span>
+        Mùa thu tới, cái nắng ấm nhẹ nhàng của mùa thu sẽ dần đến thay đi cái nắng oi ả mùa hè. Mùa thu đến không chỉ là bước chuyển mình của thiên nhiên mà nó còn kéo theo biết bao sự đổi khác của tâm hồn con người, một ánh nhìn mới, một xúc cảm mới và có thể là cả một sự khởi đầu mới.
+    </p>
+
+    <p id="dong">
+        <span class="tieu-de">Mùa Đông</span>
+        Mùa đông là mùa tương hợp với những mối tình muộn màng. Mùa của những lỗi lầm và trăn trở. Mùa mà cây sim đứng nhọc nhằn trong mưa rét nhưng không thể nở hoa. Đó cũng là mùa ủ ấp những lộc chồi. Mùa xuân bắt đầu bằng những cơn gió lạnh đến tái tê từ lúc cuối đông...
+    </p>
+
+</body>
+</html>
