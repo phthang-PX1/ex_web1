@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#container {
+    border: 1px solid blue;
+    background: gray;
+    float: left;
+    margin-top: 60px; /* Thay vì top: 60px vì container không phải absolute */
+    text-indent: 0px;
+}
+
+#container ul {
+    float: left;
+    list-style: none;
+}
+
+#container ul li {
+    position: relative;
+    float: left;
+}
+
+#container ul li a {
+    display: block;
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+    padding: .3em 6px;
+}
+
+
+#container li a:hover {
+    color: white;
+    background: orange;
+}
+
+
+#container li ul {
+    position: absolute;
+    display: none;
+    width: 10em;
+    background: white; 
+    left: 0;
+    top: 100%; 
+}
+
+
+#container li:hover ul {
+    display: block;
+}
+
+#container ul li ul li {
+    width: 100%;
+    border: 1px solid green;
+    float: none; /* Đảm bảo các mục menu con xếp chồng lên nhau */
+}
