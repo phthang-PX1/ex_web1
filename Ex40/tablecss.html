@@ -3,115 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Table css</title>
+    <title>Table CSS</title>
 
-    <style>
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            background-color: #f5f5e8;
-        }
-
-        #container {
-            width: 850px;
-            margin: auto;
-            border: 1px solid #000;
-        }
-
-        #header {
-            background-color: #ff9933;
-            color: white;
-            font-size: 22px;
-            padding: 15px 10px;
-            font-weight: bold;
-            border-bottom: 2px solid blue;
-            text-shadow: 2px 2px 3px gray;
-        }
-
-            .squares {
-                margin-bottom: 10px;
-            }
-
-            .squares span {
-                display: inline-block;
-                width: 10px;
-                height: 10px;
-                margin-right: 5px;
-                background-color: blue;
-            }
-
-            .squares span:nth-child(even) {
-                background-color: deepskyblue;
-            }
-
-            .squares span:nth-child(4n) {
-                background-color: cyan;
-        }
-
-        #menu {
-            width: 190px;
-            float: left;
-            border: 2px solid blue;
-            margin-left: 5px;
-            margin-bottom: 15px;
-            margin-top: 15px;
-        }
-
-        #menu h3 {
-            background-color: blue;
-            color: white;
-            text-align: center;
-            margin: 0;
-            padding: 5px;
-        }
-
-        #menu ul {
-            list-style-type: none;
-            padding: 5px;
-            margin: 0;
-        }
-
-        #menu ul li {
-            padding: 4px;
-        }
-
-        #content {
-            margin-left: 220px;
-            padding: 10px;
-        }
-
-        #content h1 {
-            color: blue;
-            letter-spacing: 5px;
-        }
-
-        table {
-            border-collapse: collapse;
-            width: 550px;       
-        }
-
-        table, th, td {
-            border: 1px solid black;
-        }
-
-        th {
-            background-color: #ff9933;
-            color: white;
-            padding: 10px;
-        }
-
-        td {
-            padding: 8px;
-        }
-
-        #footer {
-            clear: both;
-            text-align: center;
-            border-top: 1px solid blue;
-            padding: 5px;
-            margin-top: 10px;
-            font-size: 14px;
-        }
-    </style>
+    <link rel="stylesheet" href="mainstyle.css">
 </head>
 
 <body>
@@ -119,7 +13,6 @@
 <div id="container">
 
     <div id="header">
-
         <div class="squares">
             <span></span><span></span><span></span><span></span>
             <span></span><span></span><span></span><span></span>
@@ -202,25 +95,13 @@
     </div>
 
     <div id="footer">
-        <span style="color:blue;"><b>Monroe Public Library</b></span>
-
-        <span style="color:black;">
-            580 Main Street, Monroe, OH 45050
-        </span>
-
-        <span style="color:blue;"><b>Phone</b></span>
-
-        <span style="color:black;">
-            (513) 555-0211
-        </span>
-
-        <span style="color:blue;"><b>Fax</b></span>
-
-        <span style="color:black;">
-            (513) 555-0241
-        </span>
+        <span class="blue-text"><b>Monroe Public Library</b></span>
+        <span class="black-text">580 Main Street, Monroe, OH 45050</span>
+        <span class="blue-text"><b>Phone</b></span>
+        <span class="black-text">(513) 555-0211</span>
+        <span class="blue-text"><b>Fax</b></span>
+        <span class="black-text">(513) 555-0241</span>
     </div>
-
 
 </div>
 
