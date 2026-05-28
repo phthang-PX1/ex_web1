@@ -1,0 +1,145 @@
+BODY { 
+    color: green; /* Màu mặc định cho toàn trang */
+    background: white fixed center center; 
+} 
+
+.wrapper {
+    max-width: 1000px; /* Độ rộng tối đa của khối nội dung */
+    margin: 20px auto;  /* Căn giữa khối nội dung ra chính giữa trang web */
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.95); /* Giữ nền trắng mờ để nổi bật nội dung */
+    
+    /* Tạo viền màu xanh lá cây dày 3px bọc quanh nội dung */
+    border: 4px solid blue; 
+    
+    /* Bo tròn nhẹ 4 góc của khung viền cho đẹp mắt */
+    border-radius: 5px; 
+}
+
+H1, H2, H3, H4, H5, H6 { 
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 15px;
+    margin-bottom: 10px;
+} 
+
+/* Class định dạng nhóm chữ màu vàng nâu cổ điển rgb(153,102,6) */
+.brown-text {
+    color: rgb(153,102,6) !important;
+}
+
+.green-t {
+    color: green !important;
+    font-weight: bold !important;
+}
+/* Áp dụng màu vàng nâu cho cả tiêu đề h1 và h2 */
+h1, h2 {
+    color: rgb(153,102,6);
+}
+
+
+BLOCKQUOTE { 
+    background-color: silver;
+    color: green; 
+    padding: 12px;
+    margin: 15px 0;
+    font-style: italic;
+    border-left: 4px solid green;
+} 
+
+/* DANH SÁCH SẢN PHẨM */
+UL {
+    list-style: circle url(Hinh/Apple.jpg) outside;
+    padding-left: 25px;
+} 
+
+/* Tên sản phẩm in đậm */
+UL B { 
+    color: rgb(155,0,0); /* Màu đỏ sẫm */
+} 
+
+
+A { 
+    font-size: 0.9em;  
+    color: blue; 
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+} 
+
+A:hover { 
+    color: red;  
+    text-transform: uppercase; 
+    font-weight: bold; 
+} 
+
+/* KHỐI HỘP BÊN PHẢI (FLOAT RIGHT) */
+DIV.Article { 
+    padding: 0.5em;  
+    border-style: solid;  
+    border-width: 2px;  
+    background-color: rgb(252,221,163); 
+    width: 250px;  
+    float: right; 
+    margin-left: 15px;
+    margin-bottom: 15px;
+    color: green; /* Đảm bảo chữ thường trong block này ăn theo màu hệ thống */
+} 
+
+/* CHÂN TRANG */
+ADDRESS { 
+    font-size: 0.9em;  
+    font-style: normal;  
+    text-align: left;  
+    text-transform: uppercase;
+    margin-top: 20px;
+    padding-top: 10px;
+    color: green;
+} 
+
+/* BỐ CỤC HỖ TRỢ HIỂN THỊ CÂN ĐỐI*/
+* {
+    box-sizing: border-box;
+}
+
+.wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.95);
+}
+
+header {
+    text-align: center;
+    border-bottom: 1px solid green;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+
+.main-logo {
+    max-width: 400px;
+    border: 1px dashed #999;
+}
+
+.galaxy-img-box {
+    width: 100%;
+    height: 120px;
+    border: 1px solid #999;
+    margin: 10px 0;
+}
+
+.galaxy-img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+p {
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid green;
+    margin-top: 30px;
+}
