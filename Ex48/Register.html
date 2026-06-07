@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Register - Jackson Electronics</title>
+    <link rel="stylesheet" href="Register.css">
+</head>
+<body>
+  <div class="page-wrapper">
+
+    <!-- LOGO -->
+    <div class="logo">
+      <div class="logo-box">
+        <img src="hinh/Jackson.gif" alt="Jackson logo" style="max-width:100%; display:block;">
+      </img>
+    </div>
+
+    <!-- TITLE -->
+    <h1 class="form-title">Registration Form</h1>
+    <p class="form-subtitle">Register your Jackson Electronics product here</p>
+
+    <!-- FORM -->
+    <form id="regForm" action="#" method="post">
+
+      <!-- First Name / Last Name -->
+      <div class="form-row">
+        <span class="form-label">First Name:</span>
+        <input type="text" name="firstname" id="firstname" style="width:170px;">
+        <span class="inline-label" style="margin-left:8px;">Last Name:</span>
+        <input type="text" name="lastname" id="lastname" style="width:145px; margin-left:4px;">
+      </div>
+
+      <!-- Address 1 -->
+      <div class="form-row">
+        <span class="form-label">Address #1:</span>
+        <input type="text" name="address1" id="address1" style="width:330px;">
+      </div>
+
+      <!-- Address 2 -->
+      <div class="form-row">
+        <span class="form-label">Address #2:</span>
+        <input type="text" name="address2" id="address2" style="width:330px;">
+      </div>
+
+      <!-- City / State / Zip -->
+      <div class="form-row">
+        <span class="form-label">City:</span>
+        <input type="text" name="city" id="city" style="width:185px;">
+        <span class="inline-label" style="margin-left:6px;">State:</span>
+        <input type="text" name="state" id="state" style="width:60px; margin-left:4px;">
+        <span class="inline-label" style="margin-left:6px;">Zip:</span>
+        <input type="text" name="zip" id="zip" style="width:75px; margin-left:4px;">
+      </div>
+
+      <!-- Country -->
+      <div class="form-row">
+        <span class="form-label">Country:</span>
+        <input type="text" name="country" id="country" value="" style="width:185px;">
+      </div>
+
+      <hr class="section-divider">
+
+      <!-- Product -->
+      <div class="form-row">
+        <span class="form-label">Product:</span>
+        <select name="product" id="product">
+          <option value="scanmaster">ScanMaster</option>
+          <option value="printpro">PrintPro</option>
+          <option value="copymachineplus">CopyMachine+</option>
+          <option value="digidrive">DigiDrive</option>
+        </select>
+      </div>
+
+      <!-- Date Purchased -->
+      <div class="form-row">
+        <span class="form-label">Date Purchased:</span>
+        <input type="text" name="datepurchased" id="datepurchased" style="width:185px;">
+      </div>
+
+      <!-- Serial # -->
+      <div class="form-row">
+        <span class="form-label">Serial #:</span>
+        <input type="text" name="serial" id="serial" style="width:185px;">
+      </div>
+
+      <!-- Used For -->
+      <div class="form-row" style="align-items:flex-start;">
+        <span class="form-label" style="padding-top:2px;">Used for:</span>
+        <div class="radio-group">
+          <label><input type="radio" name="usedfor" value="home"> Home</label>
+          <label><input type="radio" name="usedfor" value="educational"> Educational Institution</label>
+          <label><input type="radio" name="usedfor" value="business" > Business</label>
+          <label><input type="radio" name="usedfor" value="other"> Other</label>
+          <label><input type="radio" name="usedfor" value="government"> Government</label>
+        </div>
+      </div>
+
+      <!-- System -->
+      <div class="form-row" style="align-items:flex-start;">
+        <span class="form-label" style="padding-top:2px;">System (check all that apply):</span>
+        <div class="check-group">
+          <label><input type="checkbox" name="system" value="windows"> Windows</label>
+          <label><input type="checkbox" name="system" value="unix"> UNIX</label>
+          <label><input type="checkbox" name="system" value="macintosh"> Macintosh</label>
+          <label><input type="checkbox" name="system" value="other_os"> Other</label>
+        </div>
+      </div>
+
+      <hr class="section-divider">
+
+      <!-- Comments -->
+      <div class="comments-row">
+        <span class="form-label" style="padding-top:3px;">Comments?:</span>
+        <textarea name="comments" id="comments" rows="5" style="width:340px;"></textarea>
+      </div>
+
+      <!-- Buttons -->
+      <div class="btn-row">
+        <button type="button" onclick="handleRegister()">Click to register</button>
+        <button type="button" onclick="handleCancel()">Click to cancel</button>
+      </div>
+
+    </form>
+  </div>
+
+  <script>
+    function handleRegister() {
+      alert('Đăng ký thành công!\nCảm ơn bạn đã đăng ký sản phẩm Jackson Electronics.');
+    }
+
+    function handleCancel() {
+      document.getElementById('regForm').reset();
+    }
+  </script>
+</body>
+</html>
