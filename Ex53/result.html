@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Kết quả nhận dữ liệu từ GET</title>
+    <link rel="stylesheet" href="mainstyle.css">
+</head>
+<body>
+
+    <div class="result-container">
+        <h3 class="result-title">Dữ liệu nhận được qua phương thức GET:</h3>
+        <div id="print-data">
+            </div>
+        <br>
+        <a href="sp_get.html" style="color: #71a4df; text-decoration: none;">← Quay lại nhập lại</a>
+    </div>
+
+    <script>
+        // Lấy chuỗi tham số trên URL (Ví dụ: ?qty_C112=2&item_C112=39.9...)
+        const urlParams = new URLSearchParams(window.location.search);
+        const printDiv = document.getElementById('print-data');
+
+        if (urlParams.toString() === "") {
+            printDiv.innerHTML = "<p style='color:red;'>Không tìm thấy dữ liệu nào được gửi đến!</p>";
+        } else {
+            // Duyệt qua từng cặp name=value thu được từ Method GET để in ra
+            urlParams.forEach((value, key) => {
+                const row = document.createElement('div');
+                row.className = 'data-item';
+                row.innerHTML = `Trường dữ liệu <span class="data-key">[${key}]</span>: ${value || '<i>(Để trống)</i>'}`;
+                printDiv.appendChild(row);
+            });
+        }
+    </script>
+
+</body>
+</html>
