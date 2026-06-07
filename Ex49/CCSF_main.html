@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Online Classifieds Search Form</title>
+    <link rel="stylesheet" href="OCSF_style.css">
+  
+</head>
+<body>
+
+<div class="container">
+  <h1 class="form-title">Online Classifieds Search Form</h1>
+  <hr>
+
+  <form id="searchForm" action="#" method="get">
+
+    <!-- SECTION 1 -->
+    <div class="section-label">1) Search for a classified in the following sections:</div>
+    <div class="radio-grid">
+      <label><input type="radio" name="section" value="Employment"> Employment</label>
+      <label><input type="radio" name="section" value="Personal"> Personal</label>
+      <label><input type="radio" name="section" value="ForSale" > For Sale</label>
+      <label><input type="radio" name="section" value="Miscellaneous"> Miscellanecus</label>
+      <label><input type="radio" name="section" value="Housing"> Housing</label>
+      <label><input type="radio" name="section" value="All"> All of the above</label>
+    </div>
+
+    <!-- SECTION 2 -->
+    <div class="section-label">2) Search the following publications:</div>
+    <div class="check-grid">
+      <label><input type="checkbox" name="pub" value="midwest" > Midwest times</label>
+      <label><input type="checkbox" name="pub" value="modern"> Modern News</label>
+      <label><input type="checkbox" name="pub" value="employment"> Employment Today</label>
+      <label><input type="checkbox" name="pub" value="greatlakes" > Great Lakes Classifieds</label>
+      <label><input type="checkbox" name="pub" value="middleton"> Middleton Daily</label>
+      <label><input type="checkbox" name="pub" value="cashtown"> Cashtown Daily News</label>
+    </div>
+
+    <!-- SECTION 3 -->
+    <div class="section-label">3) From to
+      <input type="date" name="datefrom" id="datefrom" style="margin-left:6px;">
+      to
+      <input type="date" name="dateto" id="dateto">
+      .
+    </div>
+
+    <!-- SECTION 4 -->
+    <div class="section-label" style="margin-top:14px;">4) Enter a few keywords to describe the classified.</div>
+    <input type="text" class="keywords-input" name="keywords" id="keywords" placeholder="">
+
+    <!-- SECTION 5 -->
+    <div class="section-label">5) Click one of the options below:</div>
+    <div class="btn-row">
+      <button type="button" class="icon-btn btn-search" onclick="handleSearch()">
+        <img src="hinh/Search.gif" alt="Search" style="height:36px; width:auto;">
+    
+      </button>
+      <button type="button" class="icon-btn btn-help" onclick="showHelp()">
+        <img src="hinh/Help.gif" alt="Help" style="height:36px; width:auto;">
+  
+      </button>
+      <button type="button" class="icon-btn btn-cancel" onclick="handleCancel()">
+        <img src="hinh/Cancel.gif" alt="Cancel" style="height:36px; width:auto;">
+  
+      </button>
+    </div>
+
+  </form>
+</div>
+
+<!-- ===== SEARCH RESULTS MODAL ===== -->
+<div id="searchOverlay">
+  <div class="search-box">
+    <div class="search-header">
+      <span>🔍 Search Results</span>
+      <button onclick="closeSearch()">✖</button>
+    </div>
+    <div class="search-body" id="searchBody">
+    </div>
+    <div class="search-footer">
+      <button onclick="closeSearch()">Close</button>
+    </div>
+  </div>
+</div>
+
+<!-- ===== HELP MODAL ===== -->
+<div id="helpOverlay">
+  <div class="help-box">
+    <div class="help-header">
+      <span>❓ Help – Online Classifieds Search</span>
+      <button onclick="closeHelp()">✖</button>
+    </div>
+    <div class="help-body">
+      <h3>1. Search Sections</h3>
+      <p>Chọn một danh mục bạn muốn tìm kiếm quảng cáo:</p>
+      <ul>
+        <li><b>Employment</b> – Việc làm, tuyển dụng</li>
+        <li><b>For Sale</b> – Rao bán đồ vật, tài sản</li>
+        <li><b>Housing</b> – Bất động sản, nhà ở</li>
+        <li><b>Personal</b> – Thông báo cá nhân</li>
+        <li><b>Miscellaneous</b> – Linh tinh, khác</li>
+        <li><b>All of the above</b> – Tìm kiếm tất cả danh mục</li>
+      </ul>
+
+      <h3>2. Publications</h3>
+      <p>Tích chọn một hoặc nhiều tờ báo bạn muốn tìm kiếm quảng cáo trong đó. Bạn có thể chọn nhiều tờ báo cùng lúc.</p>
+
+      <h3>3. Date Range</h3>
+      <p>Nhập khoảng thời gian đăng quảng cáo theo định dạng <b>mm/dd/yy</b>.<br>
+      Ví dụ: From <code>01/01/24</code> to <code>12/31/24</code></p>
+
+      <h3>4. Keywords</h3>
+      <p>Nhập từ khóa để mô tả quảng cáo bạn đang tìm.<br>
+      Ví dụ: <i>"laptop", "apartment downtown", "part-time job"</i></p>
+
+      <h3>5. Buttons</h3>
+      <ul>
+        <li><b style="color:#009900">✔ Search</b> – Thực hiện tìm kiếm</li>
+        <li><b style="color:#0000cc">? Help</b> – Hiển thị trang trợ giúp này</li>
+        <li><b style="color:#cc0000">✖ Cancel</b> – Xóa trắng toàn bộ dữ liệu</li>
+      </ul>
+    </div>
+    <div class="help-footer">
+      <button onclick="closeHelp()">Đóng trợ giúp</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  function handleSearch() {
+    const section = document.querySelector('input[name="section"]:checked');
+    const sectionVal = section ? section.value : 'N/A';
+
+    const pubs = [...document.querySelectorAll('input[name="pub"]:checked')].map(c => c.parentElement.textContent.trim());
+    const pubVal = pubs.length > 0 ? pubs.join(', ') : '(none selected)';
+
+    const from = document.getElementById('datefrom').value || '(not set)';
+    const to   = document.getElementById('dateto').value   || '(not set)';
+    const kw   = document.getElementById('keywords').value || '(none)';
+
+    const fakeCount = Math.floor(Math.random() * 80) + 5;
+
+    document.getElementById('searchBody').innerHTML = `
+      <div class="result-row"><span class="result-label">Section:</span><span class="result-value">${sectionVal}</span></div>
+      <div class="result-row"><span class="result-label">Publications:</span><span class="result-value">${pubVal}</span></div>
+      <div class="result-row"><span class="result-label">Date range:</span><span class="result-value">${from} → ${to}</span></div>
+      <div class="result-row"><span class="result-label">Keywords:</span><span class="result-value">${kw}</span></div>
+      <div class="result-count">✔ Tìm thấy ${fakeCount} kết quả phù hợp.</div>
+    `;
+    document.getElementById('searchOverlay').classList.add('show');
+  }
+
+  function closeSearch() {
+    document.getElementById('searchOverlay').classList.remove('show');
+  }
+
+  function showHelp() {
+    document.getElementById('helpOverlay').classList.add('show');
+  }
+
+  function closeHelp() {
+    document.getElementById('helpOverlay').classList.remove('show');
+  }
+
+  function handleCancel() {
+    document.getElementById('searchForm').reset();
+  }
+
+  // Close overlays when clicking backdrop
+  document.getElementById('searchOverlay').addEventListener('click', function(e) {
+    if (e.target === this) closeSearch();
+  });
+  document.getElementById('helpOverlay').addEventListener('click', function(e) {
+    if (e.target === this) closeHelp();
+  });
+</script>
+</body>
+</html>
