@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+BODY { 
+    color: green;  
+    background: white url(hinh/Draft.jpg) no-repeat fixed center center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 16px;
+    line-height: 1.5;
+} 
+
+.wrapper {
+    width: 100%;
+    padding: 0 40px;
+}
+
+header {
+    text-align: center;
+    padding: 25px 0 15px 0;
+}
+
+.logo-container {
+    margin-bottom: 15px;
+}
+
+.logo-container img {
+    max-height: 110px;
+    width: auto;
+    display: inline-block;
+}
+
+.top-links {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+H1, H2, H3, H4, H5, H6 { 
+    font-family: Arial, Helvetica, sans-serif 
+} 
+
+h1 {
+    font-size: 42px;
+    font-weight: normal;
+    margin-bottom: 15px;
+}
+
+h2 {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+.main-layout {
+    display: flex;
+    gap: 40px;
+    padding: 20px 0;
+}
+
+.left-content {
+    flex: 1;
+}
+
+.intro-text {
+    font-size: 17px;
+    margin-bottom: 30px;
+    text-align: justify;
+}
+
+UL {
+    list-style: circle url(hinh/Apple.jpg) outside;
+    padding-left: 20px;
+} 
+
+.product-list li {
+    margin-bottom: 14px;
+    font-size: 16px;
+    text-align: justify;
+}
+
+UL B { 
+    color: rgb(155,0,0);
+} 
+
+DIV.Article { 
+    padding: 0.5em;  
+    border-style: solid;  
+    border-width: 2px;  
+    background-color: rgb(252,221,163); 
+    width: 250px;  
+    float: right;
+} 
+
+DIV.Article h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    font-weight: normal;
+}
+
+.sidebar-img {
+    float: right;
+    width: 110px;
+    height: auto;
+    margin-left: 10px;
+    margin-bottom: 5px;
+}
+
+DIV.Article p {
+    font-size: 15px;
+    margin-bottom: 15px;
+    text-align: justify;
+    line-height: 1.4;
+}
+
+BLOCKQUOTE { 
+    background-color: silver;
+    padding: 10px 20px;
+    margin-bottom: 12px;
+    font-size: 16px;
+} 
+
+A { 
+    font-size: 0.9em;  
+    color: green;
+} 
+
+A:hover { 
+    color: red;  
+    text-transform: uppercase; 
+    font-weight: bold; 
+} 
+
+.Special { 
+    color: rgb(153,102,6);  
+    font-weight: bold; 
+} 
+
+.feedback-section {
+    padding: 20px 0 10px 0;
+    clear: both;
+}
+
+.feedback-intro {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.author-outside {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+footer {
+    border-top: 1px solid #7f7f7f;
+    padding: 25px 0;
+}
+
+ADDRESS { 
+    font-size: 0.9em;  
+    font-style: normal;  
+    text-align: center;  
+    text-transform: uppercase; 
+    line-height: 1.5;
+}

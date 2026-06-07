@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #f0f0f0;
+}
+
+.web-container {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #f7b749; 
+    border: 2px solid #555;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+}
+
+.logo-placeholder {
+    width: 450px;
+    height: auto;
+    max-height: 100px;
+    display: block;
+    margin: 0 auto;
+}
+
+.weather-box {
+    background-color: #d1e064; 
+    border: 1px solid #777;
+    margin: 10px 40px;
+    padding: 12px;
+    text-align: center;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.weather-box a {
+    color: blue;
+    text-decoration: underline;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 6px;
+}
+
+.main-layout {
+    display: flex;
+    flex: 1;
+    padding: 20px 40px;
+    gap: 40px;
+}
+
+.content-left {
+    flex: 3;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #000;
+}
+
+.content-left h1 {
+    color: #b30086; 
+    font-size: 32px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+.content-left p {
+    margin-bottom: 16px;
+    text-align: justify;
+}
+
+.festival-section {
+    overflow: hidden;
+    margin-bottom: 25px;
+}
+
+.festival-image-container {
+    float: right;
+    width: 240px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+.festival-image-container img {
+    width: 100%;
+    border: 1px solid #000;
+}
+
+.mrim-section {
+    margin-top: 35px;
+    overflow: hidden;
+}
+
+.mrim-image-container {
+    float: left;
+    width: 200px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+}
+
+.mrim-image-container img {
+    width: 100%;
+    border: 1px solid #000;
+}
+
+.sidebar-right {
+    width: 280px;
+    min-width: 280px;
+    background-color: #00ffaa; 
+    border-left: 1px solid #777;
+    padding: 20px;
+    font-size: 15px;
+}
+
+.sidebar-right h3 {
+    color: #b30086;
+    font-size: 18px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-weight: normal;
+}
+
+.sidebar-right h3:first-of-type {
+    margin-top: 0;
+}
+
+.sidebar-right ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.sidebar-right ul li {
+    margin-bottom: 6px;
+}
+
+.sidebar-right ul li a {
+    color: blue;
+    text-decoration: underline;
+}

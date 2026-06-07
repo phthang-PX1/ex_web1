@@ -7,11 +7,33 @@ body {
 .header {
     background-color: #E88C30;
     color: white;
-    padding: 10px 20px 20px 30px;
+    padding: 25px 20px 20px 30px; 
     margin-bottom: 20px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); 
 }
 
+.color-dots-container {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 15px;
+}
+
+.dot-group {
+    display: flex;
+    gap: 5px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 1px;
+}
+
+.purple { background-color: #2A1CE4; }
+.blue-dark { background-color: #1C5AE4; }
+.blue-mid { background-color: #258BE9; }
+.blue-light { background-color: #49B4F0; }
+.cyan { background-color: #63FFE9; }
 
 .header h1 {
     margin: 0;

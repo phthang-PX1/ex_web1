@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newborn Registration</title>
+    <link rel="stylesheet" href="mainstyle.css">
+</head>
+<body>
+    <div class="form-container">
+        <div class="banner-container">
+            <img src="Logo.gif" alt="St. Mary's Banner" class="banner-img">
+        </div>
+
+        <h1>Newborn Registration</h1>
+
+        <form action="#" method="POST" onsubmit="alert('Đăng ký thành công!'); return false;">
+            
+            <div class="form-row">
+                <div class="label-col"><label>Date:</label></div>
+                <div class="input-col">
+                    <input type="date" name="date" required title="Vui lòng chọn ngày đăng ký">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="label-col"><label>1) Infant's first name:</label></div>
+                <div class="input-col inline-inputs">
+                    <input type="text" name="infant_first_name" required title="Vui lòng nhập tên của bé">
+                    <span class="inline-label">Last:</span>
+                    <input type="text" name="infant_last_name" required title="Vui lòng nhập họ của bé">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="label-col"><label>2) Medical Record #:</label></div>
+                <div class="input-col">
+                    <input type="text" name="medical_record" required pattern="[a-zA-Z0-9]+" title="Vui lòng nhập mã hồ sơ y tế hợp lệ">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="label-col"><label>3) Date of birth:</label></div>
+                <div class="input-col">
+                    <input type="date" name="dob" required title="Vui lòng chọn ngày sinh">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="label-col"><label>4) Birth weight :</label></div>
+                <div class="input-col">
+                    <input type="number" name="birth_weight" step="0.01" min="0.1" required title="Vui lòng nhập cân nặng hợp lệ">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="label-col"><label>5) APGAR score :</label></div>
+                <div class="input-col">
+                    <input type="number" name="apgar_score" min="0" max="10" required title="Vui lòng nhập điểm APGAR (0-10)">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="label-col"><label>6) Mother's first name:</label></div>
+                <div class="input-col inline-inputs">
+                    <input type="text" name="mother_first_name" required title="Vui lòng nhập tên của mẹ">
+                    <span class="inline-label">Last:</span>
+                    <input type="text" name="mother_last_name" required title="Vui lòng nhập họ của mẹ">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="label-col"><label>7) Father's first name :</label></div>
+                <div class="input-col inline-inputs">
+                    <input type="text" name="father_first_name" required title="Vui lòng nhập tên của cha">
+                    <span class="inline-label">Last:</span>
+                    <input type="text" name="father_last_name" required title="Vui lòng nhập họ của cha">
+                </div>
+            </div>
+
+            <div class="form-row align-top">
+                <div class="label-col">
+                    <label>8) Physician (check<br>all that apply:)</label>
+                </div>
+                <div class="input-col">
+                    <select name="physician" multiple size="4" required title="Vui lòng chọn ít nhất một bác sĩ">
+                        <option value="Dr. Warren Albert">Dr. Warren Albert</option>
+                        <option value="Dr. Maria Alvarez">Dr. Maria Alvarez</option>
+                        <option value="Dr. Karen Brinkman">Dr. Karen Brinkman</option>
+                        <option value="Dr. Micheal Kerry">Dr. Micheal Kerry</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="button-row">
+                <button type="submit">Register</button>
+                <button type="reset">Cancel</button>
+            </div>
+
+        </form>
+    </div>
+</body>
+</html>

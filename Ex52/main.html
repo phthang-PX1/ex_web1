@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Form Liên Hệ</title>
+</head>
+<body style="font-family: 'Times New Roman', serif; font-size: 18px; margin: 20px;">
+
+    <form action="ketqua.html" method="GET">
+        
+        <table>
+            <tr>
+                <td>Họ và tên :</td>
+                <td><input type="text" name="ho_ten" style="width: 100%;" required></td>
+            </tr>
+            <tr>
+                <td>Email :</td>
+                <td><input type="email" name="email" style="width: 100%;" required></td>
+            </tr>
+            <tr>
+                <td>Giới tính :</td>
+                <td>
+                    <label><input type="radio" name="gioi_tinh" value="Nam" required> Nam,</label>
+                    <label><input type="radio" name="gioi_tinh" value="Nữ" checked required> Nữ</label>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <label><input type="checkbox" name="nghe_nghiep" checked> Tôi đã có nghề nghiệp ổn định</label>
+                </td>
+            </tr>
+            <tr>
+                <td>Đến từ</td>
+                <td>
+                    <select name="den_tu">
+                        <option>Miền Bắc</option>
+                        <option>Miền Trung</option>
+                        <option>Miền Nam</option>
+                        <option>Miền Tây</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+
+        <div>Nội dung cần liên hệ với chúng tôi :</div>
+        <textarea cols="50" rows="5" name="noi_dung" required placeholder="Nhập nội dung bạn cần liên hệ ở đây"></textarea>
+
+        <div>
+            <button type="submit">Gởi thông điệp</button>
+            <button type="reset">Nhập lại tất cả</button>
+        </div>
+
+    </form>
+
+</body>
+</html>

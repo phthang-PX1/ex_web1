@@ -1,0 +1,177 @@
+body {
+    font-family: "Times New Roman", Times, serif;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 20px;
+    font-size: 20px;
+}
+
+.form-container {
+    width: 100%;
+    background-color: #d2fdfd;
+    border: 2px solid #2a36df;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+.header-image {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.banner-img {
+    max-width: 100%;
+    height: auto;
+    background-color: #5d3b25;
+    border: 1px solid #000000;
+    display: inline-block;
+}
+
+.form-title {
+    font-size: 30px;
+    font-weight: normal;
+    margin: 15px 0 10px 0;
+    color: #000000;
+}
+
+.divider {
+    border: 0;
+    border-top: 1px solid #4ebdbd;
+    margin-bottom: 25px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    color: #000000;
+}
+
+.label-num {
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.spacing {
+    display: inline-block;
+    width: 25px;
+}
+
+.input-text {
+    padding: 4px;
+    border: 1px solid #7f9db9;
+    background-color: #ffffff;
+    font-family: inherit;
+    font-size: 18px;
+}
+
+.select-box {
+    padding: 3px;
+    border: 1px solid #7f9db9;
+    font-family: inherit;
+    font-size: 18px;
+}
+
+.textarea-box {
+    display: block;
+    width: 95%;
+    margin-top: 10px;
+    margin-left: 20px;
+    border: 1px solid #7f9db9;
+    font-family: inherit;
+    font-size: 18px;
+    padding: 8px;
+    resize: vertical;
+    box-sizing: border-box;
+}
+
+.expense-table {
+    border-collapse: collapse;
+    width: 95%;
+    margin-top: 15px;
+    margin-left: 20px;
+    background-color: #c9f7f7;
+}
+
+.expense-table th, 
+.expense-table td {
+    border: 1px solid #555555;
+    padding: 8px;
+}
+
+.expense-table th {
+    background-color: #d2fdfd;
+    font-weight: bold;
+    font-size: 19px;
+    text-align: center;
+}
+
+.input-table-date {
+    width: 95%;
+    text-align: center;
+    border: 1px solid #7f9db9;
+    font-family: inherit;
+    font-size: 18px;
+    padding: 2px;
+    box-sizing: border-box;
+}
+
+.input-table-desc {
+    width: 98%;
+    border: 1px solid #7f9db9;
+    font-family: inherit;
+    font-size: 18px;
+    padding: 2px;
+    box-sizing: border-box;
+}
+
+.select-table {
+    width: 100%;
+    border: 1px solid #7f9db9;
+    font-family: inherit;
+    font-size: 18px;
+    padding: 2px;
+    box-sizing: border-box;
+}
+
+.input-table-amount {
+    width: 95%;
+    text-align: right;
+    border: 1px solid #7f9db9;
+    font-family: inherit;
+    font-size: 18px;
+    padding: 2px;
+    box-sizing: border-box;
+}
+
+.radio-group label {
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.button-group {
+    margin-top: 30px;
+    margin-bottom: 25px;
+    margin-left: 20px;
+}
+
+.btn-submit, 
+.btn-reset {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    padding: 6px 18px;
+    margin-right: 12px;
+    background-color: #f0f0f0;
+    border: 1px solid #707070;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.btn-submit:hover, 
+.btn-reset:hover {
+    background-color: #e0e0e0;
+}
+
+.footer-info {
+    font-size: 18px;
+    margin-top: 25px;
+    color: #333333;
+}

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Expense Report</title>
+    <link rel="stylesheet" href="mainstyle.css">
+</head>
+<body>
+
+    <div class="form-container">
+        <div class="header-image">
+            <img src="../Ex50/DeLong.jpg" alt="DeLong Enterprises" class="banner-img">
+        </div>
+
+        <h1 class="form-title">Travel Expense Report</h1>
+        <hr class="divider">
+
+        <form onsubmit="alert('Thông báo: Đã gửi báo cáo chi phí thành công!'); return false;">
+            
+            <div class="form-group">
+                <span class="label-num">1)</span> First Name: <input type="text" name="firstName" size="25" class="input-text">
+                <span class="spacing"></span>
+                Last Name: <input type="text" name="lastName" size="30" class="input-text">
+            </div>
+
+            <div class="form-group">
+                <span class="label-num">2)</span> Social Security Number: <input type="text" name="ssn" size="15" class="input-text">
+            </div>
+
+            <div class="form-group">
+                <span class="label-num">3)</span> Department: 
+                <select name="department" class="select-box">
+                    <option value="accounting">Accounting</option>
+                    <option value="hr">HR</option>
+                    <option value="it">IT</option>
+                    <option value="marketing">Marketing</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <span class="label-num">4)</span> Describe the purpose of your trip.
+                <textarea name="purpose" rows="6" class="textarea-box"></textarea>
+            </div>
+
+            <div class="form-group">
+                <span class="label-num">5)</span> Itemize your travel expenses
+                <table class="expense-table">
+                    <thead>
+                        <tr>
+                            <th style="width: 15%;">Date</th>
+                            <th style="width: 50%;">Description</th>
+                            <th style="width: 20%;">Category</th>
+                            <th style="width: 15%;">Amount</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="text" class="input-table-date" placeholder="mm/dd/yy"></td>
+                            <td><input type="text" class="input-table-desc"></td>
+                            <td>
+                                <select class="select-table">
+                                    <option>Meal</option>
+                                    <option>Transport</option>
+                                    <option>Hotel</option>
+                                    <option>Other</option>
+                                </select>
+                            </td>
+                            <td><input type="text" class="input-table-amount"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" class="input-table-date" placeholder="mm/dd/yy"></td>
+                            <td><input type="text" class="input-table-desc"></td>
+                            <td>
+                                <select class="select-table">
+                                    <option>Meal</option>
+                                    <option>Transport</option>
+                                    <option>Hotel</option>
+                                    <option>Other</option>
+                                </select>
+                            </td>
+                            <td><input type="text" class="input-table-amount"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" class="input-table-date" placeholder="mm/dd/yy"></td>
+                            <td><input type="text" class="input-table-desc"></td>
+                            <td>
+                                <select class="select-table">
+                                    <option>Meal</option>
+                                    <option>Transport</option>
+                                    <option>Hotel</option>
+                                    <option>Other</option>
+                                </select>
+                            </td>
+                            <td><input type="text" class="input-table-amount"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" class="input-table-date" placeholder="mm/dd/yy"></td>
+                            <td><input type="text" class="input-table-desc"></td>
+                            <td>
+                                <select class="select-table">
+                                    <option>Meal</option>
+                                    <option>Transport</option>
+                                    <option>Hotel</option>
+                                    <option>Other</option>
+                                </select>
+                            </td>
+                            <td><input type="text" class="input-table-amount"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="form-group radio-group">
+                <span class="label-num">6)</span> Have you submitted your receipts? 
+                <label><input type="radio" name="receipts" value="yes"> Yes</label>
+                <label><input type="radio" name="receipts" value="no"></label> 
+            </div>
+
+            <div class="button-group">
+                <button type="submit" class="btn-submit">Submit travel expenses</button>
+                <button type="reset" class="btn-reset">Reset</button>
+            </div>
+
+        </form>
+
+        <div class="footer-info">
+            Questions? Contact Debbie Larson in Accounting (ext. 2150).
+        </div>
+
+    </div>
+
+</body>
+</html>

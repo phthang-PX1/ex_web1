@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Kết Quả Đơn Hàng</title>
+</head>
+<body style="font-family: 'Times New Roman', serif; font-size: 18px; margin: 30px;">
+
+    <h2>Chi tiết dữ liệu sản phẩm đã nhận:</h2>
+    <table border="1" cellpadding="8" cellspacing="0" width="500">
+        <tr bgcolor="#f0f0f0">
+            <th>Mã SP</th>
+            <th>Số lượng (Qty)</th>
+            <th>Item table</th>
+        </tr>
+        
+        <tr align="center">
+            <td><strong>C112</strong> (Chuột)</td>
+            <td><span id="res_qty_c112"></span></td>
+            <td><span id="res_item_c112"></span></td>
+        </tr>
+        
+        <tr align="center">
+            <td><strong>B124</strong> (Bàn phím)</td>
+            <td><span id="res_qty_b124"></span></td>
+            <td><span id="res_item_b124"></span></td>
+        </tr>
+        
+        <tr align="center">
+            <td><strong>U125</strong> (USB)</td>
+            <td><span id="res_qty_u125"></span></td>
+            <td><span id="res_item_u125"></span></td>
+        </tr>
+
+        <tr>
+            <td colspan="3" align="right">
+                <strong>Tổng cộng (Total):</strong> 
+                <span id="res_total" style="color: red; font-weight: bold;"></span>
+            </td>
+        </tr>
+    </table>
+
+    <script>
+        // Lấy các tham số GET từ thanh địa chỉ
+        const params = new URLSearchParams(window.location.search);
+
+        // Đổ dữ liệu vào bảng C112
+        document.getElementById('res_qty_c112').textContent = params.get('qty_c112') || '0';
+        document.getElementById('res_item_c112').textContent = params.get('item_c112') || 'Trống';
+
+        // Đổ dữ liệu vào bảng B124
+        document.getElementById('res_qty_b124').textContent = params.get('qty_b124') || '0';
+        document.getElementById('res_item_b124').textContent = params.get('item_b124') || 'Trống';
+
+        // Đổ dữ liệu vào bảng U125
+        document.getElementById('res_qty_u125').textContent = params.get('qty_u125') || '0';
+        document.getElementById('res_item_u125').textContent = params.get('item_u125') || 'Trống';
+
+        // Tổng cộng
+        document.getElementById('res_total').textContent = params.get('total_amount') || '0';
+    </script>
+
+</body>
+</html>

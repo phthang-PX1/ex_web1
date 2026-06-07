@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Classifieds</title>
+    <link rel="stylesheet" href="mainstyle.css">
+</head>
+<body>
+    <div class="form-container">
+        <form action="search.html" method="GET">
+            <h1>Online Classifieds Search Form</h1>
+            <hr>
+
+            <div class="section-block">
+                <h2>1) Search for a classified in the following sections:</h2>
+                <div class="grid-2-col">
+                    <label><input type="radio" name="section" value="employment" required> Employment</label>
+                    <label><input type="radio" name="section" value="personal" required> Personal</label>
+                    <label><input type="radio" name="section" value="for_sale" required> For Sale</label>
+                    <label><input type="radio" name="section" value="miscellaneous" required> Miscellaneous</label>
+                    <label><input type="radio" name="section" value="housing" required> Housing</label>
+                    <label><input type="radio" name="section" value="all" required> All of the above</label>
+                </div>
+            </div>
+
+            <div class="section-block">
+                <h2>2) Search the following publications:</h2>
+                <div class="grid-3-col">
+                    <label><input type="checkbox" name="publication" value="midwest"> Midwest times</label>
+                    <label><input type="checkbox" name="publication" value="modern"> Modern News</label>
+                    <label><input type="checkbox" name="publication" value="employment_today"> Employment Today</label>
+                    <label><input type="checkbox" name="publication" value="great_lakes"> Great Lakes Classifieds</label>
+                    <label><input type="checkbox" name="publication" value="middleton"> Middleton Daily</label>
+                    <label><input type="checkbox" name="publication" value="cashtown"> Cashtown Daily News</label>
+                </div>
+            </div>
+
+            <div class="section-block inline-group">
+                <h2>3) From to</h2>
+                <input type="date" name="date_from" required>
+                <h2>to</h2>
+                <input type="date" name="date_to" required>
+            </div>
+
+            <div class="section-block">
+                <h2>4) Enter a few keywords to describe the classified.</h2>
+                <input type="text" name="keywords" class="full-width-input" minlength="2" required pattern=".*\S+.*" title="Vui lòng nhập từ khóa hợp lệ">
+            </div>
+
+            <div class="section-block">
+                <h2>5) Click one of the options below:</h2>
+                <div class="button-group">
+                    <button type="submit" class="image-button">
+                        <img src="Search.gif" alt="Search">
+                    </button>
+                    <a href="help.html" class="image-button">
+                        <img src="Help.gif" alt="Help">
+                    </a>
+                    <button type="reset" class="image-button">
+                        <img src="Cancel.gif" alt="Cancel">
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

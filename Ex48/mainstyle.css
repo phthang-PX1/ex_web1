@@ -1,0 +1,139 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 18px;
+    background-color: #ffffff;
+}
+
+/* Đã chỉnh để full bề ngang web */
+.form-container {
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #99ccff; 
+    padding: 30px 40px;
+    min-height: 100vh; /* Phủ kín màn hình theo chiều dọc */
+    border: 1px solid #ccc;
+}
+
+/* Css cho vùng chứa hình ảnh banner */
+.banner-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.banner-img {
+    max-width: 100%; /* Đảm bảo hình không bị tràn màn hình nhỏ */
+    height: auto;
+}
+
+h2 {
+    text-align: center;
+    font-size: 26px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.subtitle {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #555;
+    margin: 20px 0;
+}
+
+.form-row {
+    display: flex;
+    margin-bottom: 12px;
+    align-items: flex-start;
+}
+
+.label-col {
+    width: 250px;
+    flex-shrink: 0;
+    padding-top: 5px;
+}
+
+.input-col {
+    flex-grow: 1;
+}
+
+input[type="text"], input[type="date"], select, textarea {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    padding: 4px;
+    border: 1px solid #777;
+    background-color: #fff;
+}
+
+input[type="text"]:focus, input[type="date"]:focus, select:focus, textarea:focus {
+    outline: 2px solid #0055ff;
+}
+
+.full-width {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.inline-inputs {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.inline-label {
+    white-space: nowrap;
+    margin: 0 5px;
+}
+
+.short-input {
+    width: 60px;
+}
+
+.radio-grid {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 8px;
+}
+
+.checkbox-grid {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 8px;
+}
+
+label {
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+}
+
+input[type="radio"], input[type="checkbox"] {
+    margin-right: 8px;
+    transform: scale(1.1);
+}
+
+.button-row {
+    text-align: center;
+    margin-top: 30px;
+}
+
+button {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    padding: 4px 15px;
+    margin: 0 10px;
+    cursor: pointer;
+    background-color: #f0f0f0;
+    border: 1px solid #555;
+    border-radius: 3px;
+}
+
+button:hover {
+    background-color: #e0e0e0;
+}

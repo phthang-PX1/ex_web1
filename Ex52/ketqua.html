@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Kết Quả Form Liên Hệ</title>
+</head>
+<body style="font-family: 'Times New Roman', serif; font-size: 18px; margin: 30px;">
+
+    <h2>Thông tin bạn đã gửi:</h2>
+    <table border="1" cellpadding="8" cellspacing="0" width="500">
+        <tr>
+            <td width="150"><strong>Họ và tên:</strong></td>
+            <td><span id="res_ho_ten"></span></td>
+        </tr>
+        <tr>
+            <td><strong>Email:</strong></td>
+            <td><span id="res_email"></span></td>
+        </tr>
+        <tr>
+            <td><strong>Giới tính:</strong></td>
+            <td><span id="res_gioi_tinh"></span></td>
+        </tr>
+        <tr>
+            <td><strong>Nghề nghiệp:</strong></td>
+            <td><span id="res_nghe_nghiep">Chưa có nghề nghiệp ổn định</span></td>
+        </tr>
+        <tr>
+            <td><strong>Đến từ:</strong></td>
+            <td><span id="res_den_tu"></span></td>
+        </tr>
+        <tr>
+            <td><strong>Nội dung:</strong></td>
+            <td><span id="res_noi_dung"></span></td>
+        </tr>
+    </table>
+
+    <script>
+        // Sử dụng JavaScript để đọc dữ liệu từ URL (Method GET)
+        const params = new URLSearchParams(window.location.search);
+
+        document.getElementById('res_ho_ten').textContent = params.get('ho_ten') || 'Trống';
+        document.getElementById('res_email').textContent = params.get('email') || 'Trống';
+        document.getElementById('res_gioi_tinh').textContent = params.get('gioi_tinh') || 'Trống';
+        
+        if(params.has('nghe_nghiep')) {
+            document.getElementById('res_nghe_nghiep').textContent = params.get('nghe_nghiep');
+        }
+
+        document.getElementById('res_den_tu').textContent = params.get('den_tu') || 'Trống';
+        document.getElementById('res_noi_dung').textContent = params.get('noi_dung') || 'Trống';
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jackson Electronics Registration</title>
+    <link rel="stylesheet" href="mainstyle.css">
+</head>
+<body>
+    <div class="form-container">
+        <div class="banner-container">
+            <img src="../Ex48/hinh/Jackson.gif" alt="Jackson Electronics Banner" class="banner-img">
+        </div>
+
+        <h2>Registration Form</h2>
+        <p class="subtitle">Register your Jackson Electronics product here</p>
+
+        <form action="#" method="POST" onsubmit="alert('Đăng ký thành công!'); return false;">
+            
+            <div class="form-row">
+                <div class="label-col"><label>First Name:</label></div>
+                <div class="input-col inline-inputs">
+                    <input type="text" name="first_name" required title="Vui lòng nhập First Name">
+                    <span class="inline-label">Last Name:</span>
+                    <input type="text" name="last_name" required title="Vui lòng nhập Last Name">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="label-col"><label>Address #1:</label></div>
+                <div class="input-col">
+                    <input type="text" name="address1" class="full-width" required title="Vui lòng nhập Address #1">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="label-col"><label>Address #2:</label></div>
+                <div class="input-col">
+                    <input type="text" name="address2" class="full-width">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="label-col"><label>City:</label></div>
+                <div class="input-col inline-inputs">
+                    <input type="text" name="city" required>
+                    <span class="inline-label">State:</span>
+                    <input type="text" name="state" class="short-input" required>
+                    <span class="inline-label">Zip:</span>
+                    <input type="text" name="zip" class="short-input" required>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="label-col"><label>Country:</label></div>
+                <div class="input-col">
+                    <input type="text" name="country" value="United States" required>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="form-row">
+                <div class="label-col"><label>Product:</label></div>
+                <div class="input-col">
+                    <select name="product" required title="Vui lòng chọn sản phẩm">
+                        <option value="" disabled selected></option>
+                        <option value="ScanMaster">ScanMaster</option>
+                        <option value="PrintMaster">PrintMaster</option>
+                        <option value="FaxMaster">FaxMaster</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="label-col"><label>Date Purchased:</label></div>
+                <div class="input-col">
+                    <input type="date" name="date_purchased" required title="Vui lòng chọn ngày mua">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="label-col"><label>Serial #:</label></div>
+                <div class="input-col">
+                    <input type="text" name="serial_number" required title="Vui lòng nhập số Serial">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="label-col"><label>Used for:</label></div>
+                <div class="input-col radio-grid">
+                    <label><input type="radio" name="used_for" value="Home" required> Home</label>
+                    <label><input type="radio" name="used_for" value="Educational Institution"> Educational Institution</label>
+                    <label><input type="radio" name="used_for" value="Business"> Business</label>
+                    <label><input type="radio" name="used_for" value="Other"> Other</label>
+                    <label><input type="radio" name="used_for" value="Government"> Government</label>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="label-col"><label>System (check all that apply):</label></div>
+                <div class="input-col checkbox-grid">
+                    <label><input type="checkbox" name="system" value="Windows"> Windows</label>
+                    <label><input type="checkbox" name="system" value="UNIX"> UNIX</label>
+                    <label><input type="checkbox" name="system" value="Macintosh"> Macintosh</label>
+                    <label><input type="checkbox" name="system" value="Other"> Other</label>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="form-row">
+                <div class="label-col"><label>Comments?:</label></div>
+                <div class="input-col">
+                    <textarea name="comments" rows="5" class="full-width"></textarea>
+                </div>
+            </div>
+
+            <div class="button-row">
+                <button type="submit">Click to register</button>
+                <button type="reset">Click to cancel</button>
+            </div>
+
+        </form>
+    </div>
+</body>
+</html>
