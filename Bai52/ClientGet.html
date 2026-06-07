@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form-Get</title>
+</head>
+<body>
+<form action="ServerGet.html" method="get">
+<table>
+    <tr>
+        <td>Họ và tên :</td>
+        <td><input type="text" name="txtHoten" size="45"></td>
+    </tr>
+
+    <tr>
+        <td>Email :</td>
+        <td><input type="text" name="txtEmail" size="45"></td>
+    </tr>
+
+    <tr>
+        <td>Giới tính :</td>
+        <td>
+            <input type="radio" name="gioitinh" value="Nam"> Nam,
+            <input type="radio" name="gioitinh" value="Nu" checked> Nữ
+        </td>
+    </tr>
+
+    <tr>
+        <td colspan="2">
+            <input type="checkbox" name="nghenghiep" value="DaCoNgheNghiep">
+            Tôi đã có nghề nghiệp ổn định
+        </td>
+    </tr>
+
+    <tr>
+        <td>Đến từ</td>
+        <td>
+            <select name="khuvuc">
+                <option>Miền Bắc</option>
+                <option>Miền Trung</option>
+                <option>Miền Nam</option>
+                <option>Miền Tây</option>
+            </select>
+        </td>
+    </tr>
+</table>
+
+<p>Nội dung:</p>
+
+<textarea name="txtNoidung" rows="12" cols="60">
+Nội dung
+</textarea>
+
+<br><br>
+
+<div style="text-align:right; width:490px;">
+    <input type="submit" value="Gửi thông điệp">
+    <input type="reset" value="Nhập lại tất cả">
+</div>
+</form>
+</body>
+</html>
+
