@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Kết quả GET</title>
+
+    <script>
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(
+                /[?&]+([^=&]+)=([^&]*)/gi,
+                function(m, key, value) {
+                    vars[key] = decodeURIComponent(value.replace(/\+/g, " "));
+                }
+            );
+            return vars;
+        }
+
+        window.onload = function() {
+            var data = getUrlVars();
+
+            document.getElementById("hoten").innerHTML =
+                data["txtHoten"] || "";
+
+            document.getElementById("email").innerHTML =
+                data["txtEmail"] || "";
+
+            document.getElementById("gioitinh").innerHTML =
+                data["gioitinh"] || "";
+
+            document.getElementById("khuvuc").innerHTML =
+                data["khuvuc"] || "";
+
+            document.getElementById("noidung").innerHTML =
+                data["txtNoidung"] || "";
+
+            document.getElementById("nghenghiep").innerHTML =
+                data["nghenghiep"] ? "Đã có nghề nghiệp ổn định"
+                                   : "Chưa có nghề nghiệp ổn định";
+        };
+    </script>
+</head>
+
+<body>
+    <h2>Thông tin nhận được từ Form</h2>
+
+    <p><b>Họ và tên:</b> <span id="hoten"></span></p>
+
+    <p><b>Email:</b> <span id="email"></span></p>
+
+    <p><b>Giới tính:</b> <span id="gioitinh"></span></p>
+
+    <p><b>Nghề nghiệp:</b> <span id="nghenghiep"></span></p>
+
+    <p><b>Đến từ:</b> <span id="khuvuc"></span></p>
+
+    <p><b>Nội dung:</b></p>
+    <div id="noidung"></div>
+
+</body>
+</html>
