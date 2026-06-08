@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 53: Sản phẩm - GET</title>
+    <link rel="stylesheet" href="mainstyle.css">
+</head>
+<body>
+
+    <div class="container">
+        <form action="result.html" method="GET">
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 15%;">Part Number</th>
+                        <th style="width: 25%;">Description</th>
+                        <th style="width: 15%;">Price</th>
+                        <th style="width: 22%;">Qty</th>
+                        <th style="width: 23%;">Item table</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>C112</td>
+                        <td>Chuột Quang</td>
+                        <td>19.95$</td>
+                        <td><input type="text" name="qty_c112"></td>
+                        <td><input type="text" name="item_c112"></td>
+                    </tr>
+                    <tr>
+                        <td>B124</td>
+                        <td>Bàn Phím</td>
+                        <td>29.95$</td>
+                        <td><input type="text" name="qty_b124"></td>
+                        <td><input type="text" name="item_b124"></td>
+                    </tr>
+                    <tr>
+                        <td>U125</td>
+                        <td>USB KingMax</td>
+                        <td>39.95$</td>
+                        <td><input type="text" name="qty_u125"></td>
+                        <td><input type="text" name="item_u125"></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="total-section">
+                <label for="total">Total</label>
+                <input type="text" id="total" name="total_price">
+            </div>
+
+            <div class="btn-container">
+                <button type="submit">TongCong</button>
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>
