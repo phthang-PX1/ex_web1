@@ -1,0 +1,52 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 50px;
+}
+
+.container {
+    width: 400px;
+}
+
+h3 {
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 2px solid #555;
+}
+
+td {
+    padding: 5px;
+}
+
+.label {
+    width: 30%;
+}
+
+input[type="number"] {
+    width: 95%;
+    padding: 3px;
+    font-size: 16px;
+}
+
+.btn-group {
+    padding: 5px;
+}
+
+button {
+    padding: 3px 15px;
+    margin-right: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#ketQua {
+    font-size: 16px;
+    font-weight: normal;
+}
