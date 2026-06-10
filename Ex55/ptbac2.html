@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giải phương trình bậc 2</title>
+    <link rel="stylesheet" href="mainstyle.css">
+</head>
+<body>
+
+    <div class="container">
+        <h3>Giải phương trình bậc 2</h3>
+        <table>
+            <tr>
+                <td class="label">Hệ số a:</td>
+                <td><input type="number" id="heSoA" value="1"></td>
+            </tr>
+            <tr>
+                <td class="label">Hệ số b:</td>
+                <td><input type="number" id="heSoB" value="-2"></td>
+            </tr>
+            <tr>
+                <td class="label">Hệ số c:</td>
+                <td><input type="number" id="heSoC" value="1"></td>
+            </tr>
+            <tr>
+                <td colspan="2" class="btn-group">
+                    <button onclick="giaiPhuongTrinh()">Giải</button>
+                    <button onclick="lamTiep()">Tiếp</button>
+                </td>
+            </tr>
+            <tr>
+                <td class="label">Kết quả:</td>
+                <td id="ketQua">Nghiệm kép x1=x2=1</td>
+            </tr>
+        </table>
+    </div>
+
+    <script src="result.js"></script>
+</body>
+</html>
