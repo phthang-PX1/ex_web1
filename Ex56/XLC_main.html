@@ -6,13 +6,12 @@
 <link rel="stylesheet" href="XLC_style.css">
 </head>
 <body>
-
+ 
 <table class="main">
   <tr>
     <td>
       <h2>Sử dụng các hàm Xử Lý Chuỗi</h2>
-
-      <!-- Hai fieldset: Nhập dữ liệu + Kết quả -->
+ 
       <div class="fieldset-row">
         <fieldset>
           <legend>Nhập dữ liệu</legend>
@@ -23,8 +22,7 @@
           <textarea id="txtOutput" readonly></textarea>
         </fieldset>
       </div>
-
-      <!-- Lưới nút bằng table -->
+ 
       <table class="btns">
         <tr>
           <td><button onclick="nhapDuLieu()">Nhập dữ liệu</button></td>
@@ -46,94 +44,11 @@
           <td colspan="2"><button onclick="xemW3C()">Xem Website xử lý chuỗi w3c</button></td>
         </tr>
       </table>
-
+ 
     </td>
   </tr>
 </table>
-
-<script>
-  const inp = () => document.getElementById('txtInput').value;
-  const out = (val) => { document.getElementById('txtOutput').value = val; };
-
-  function nhapDuLieu() {
-    const val = prompt('Nhập chuỗi ký tự:');
-    if (val !== null) {
-      document.getElementById('txtInput').value = val;
-      out('');
-    }
-  }
-
-  function denKyTuHoa() {
-    const s = inp();
-    if (!s) return;
-    for (let i = 0; i < s.length; i++) {
-      const c = s[i];
-      if ((c >= 'A' && c <= 'Z') || isUpperCaseViet(c)) {
-        out('Ký tự hoa đầu tiên: "' + c + '" tại vị trí ' + i);
-        return;
-      }
-    }
-    out('Không tìm thấy ký tự hoa trong chuỗi.');
-  }
-
-  function inChuHoa() {
-    const s = inp();
-    if (!s) return;
-    out(s.toUpperCase());
-  }
-
-  function inMoiTuTrenMoiDong() {
-    const s = inp();
-    if (!s) return;
-    out(s.trim().split(/\s+/).join('\n'));
-  }
-
-  function inChuThuong() {
-    const s = inp();
-    if (!s) return;
-    out(s.toLowerCase());
-  }
-
-  function demSoTu() {
-    const s = inp().trim();
-    if (!s) { out('0'); return; }
-    out('Số từ trong chuỗi: ' + s.split(/\s+/).length);
-  }
-
-  function demSoKyTuThuong() {
-    const s = inp();
-    if (!s) return;
-    let count = 0, chars = [];
-    for (let c of s) {
-      if (isLowerCase(c)) { count++; chars.push(c); }
-    }
-    out('Số ký tự thường: ' + count + '\nCác ký tự: ' + chars.join(', '));
-  }
-
-  function inNguyenAmPhuAm() {
-    const s = inp().toLowerCase();
-    if (!s) return;
-    const nguyenAmBase = 'aeiouáàảãạăắằẳẵặâấầẩẫậéèẻẽẹêếềểễệíìỉĩịóòỏõọôốồổỗộơớờởỡợúùủũụưứừửữựýỳỷỹỵ';
-    const nguyen = [], phu = [];
-    for (let c of s) {
-      if (c === ' ') continue;
-      if (nguyenAmBase.includes(c)) nguyen.push(c);
-      else if (/[a-záàảãạăắằẳẵặâấầẩẫậéèẻẽẹêếềểễệíìỉĩịóòỏõọôốồổỗộơớờởỡợúùủũụưứừửữựýỳỷỹỵđ]/.test(c)) phu.push(c);
-    }
-    out('Nguyên âm (' + nguyen.length + '): ' + nguyen.join(', ') + '\nPhụ âm (' + phu.length + '): ' + phu.join(', '));
-  }
-
-  function xemW3C() {
-    window.open('https://www.w3schools.com/js/js_string_methods.asp', '_blank');
-  }
-
-  function isUpperCaseViet(c) {
-    return 'ÁÀẢÃẠĂẮẰẲẴẶÂẤẦẨẪẬÉÈẺẼẸÊẾỀỂỄỆÍÌỈĨỊÓÒỎÕỌÔỐỒỔỖỘƠỚỜỞỠỢÚÙỦŨỤƯỨỪỬỮỰÝỲỶỸỴĐ'.includes(c);
-  }
-
-  function isLowerCase(c) {
-    return 'abcdefghijklmnopqrstuvwxyzáàảãạăắằẳẵặâấầẩẫậéèẻẽẹêếềểễệíìỉĩịóòỏõọôốồổỗộơớờởỡợúùủũụưứừửữựýỳỷỹỵđ'.includes(c);
-  }
-</script>
+ 
+<script src="scripts.js"></script>
 </body>
 </html>
