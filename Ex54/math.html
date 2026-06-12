@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 54: Hàm toán học</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        
+       
+        .title-box {
+            border: 2px double #000;
+            background-color: #d3d3d3;
+            padding: 5px 15px;
+            display: inline-block;
+            font-weight: bold;
+            font-size: 20px;
+            font-style: italic;
+            margin-bottom: 15px;
+        }
+
+
+        table {
+            border-collapse: collapse;
+            margin-bottom: 15px;
+        }
+
+        td {
+            border: 1px solid #999;
+            padding: 4px 8px;
+        }
+
+        input[type="number"], input[type="text"] {
+            border: none;
+            outline: none;
+            width: 250px;
+            font-size: 16px;
+            background: transparent;
+        }
+
+        #ketQua {
+            color: #000;
+        }
+
+
+        .button-group {
+            margin-top: 10px;
+        }
+
+        button {
+            padding: 4px 12px;
+            margin-right: 5px;
+            background-color: #f0f0f0;
+            border: 1px solid #a6a6a6;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        button:hover {
+            background-color: #e0e0e0;
+        }
+
+ 
+    </style>
+</head>
+<body>
+
+    <div class="title-box">Bài 54: Hàm toán học</div>
+
+
+    <table>
+        <tr>
+            <td>a(So Thu 1):</td>
+            <td><input type="number" id="soA" value="30"></td>
+        </tr>
+        <tr>
+            <td>b(So Thu 2)</td>
+            <td><input type="number" id="soB" value="45"></td>
+        </tr>
+        <tr>
+            <td>c(So Thu 3)</td>
+            <td><input type="number" id="soC" value="90"></td>
+        </tr>
+        <tr>
+            <td>KET QUA</td>
+            <td><input type="text" id="ketQua" readonly></td>
+        </tr>
+    </table>
+
+    <div class="button-group">
+        <button onclick="tinhMax()">MAX</button>
+        <button onclick="tinhMin()">MIN</button>
+        <button onclick="tinhSin()">sin(a)</button>
+        <button onclick="tinhCos()">Cos(a)</button>
+        <button onclick="tinhLuyThua()">a^b</button>
+    </div>
+
+
+    <script>
+        // Hàm lấy giá trị từ các textbox nhập vào
+        function layGiaTri() {
+            let a = parseFloat(document.getElementById('soA').value) || 0;
+            let b = parseFloat(document.getElementById('soB').value) || 0;
+            let c = parseFloat(document.getElementById('soC').value) || 0;
+            return { a, b, c };
+        }
+
+        // Hàm hiển thị kết quả lên ô KET QUA
+        function hienThiKetQua(giaTri) {
+            document.getElementById('ketQua').value = giaTri;
+        }
+
+        // 1. Hàm tìm số lớn nhất (MAX)
+        function tinhMax() {
+            let { a, b, c } = layGiaTri();
+            let max = Math.max(a, b, c);
+            hienThiKetQua(max);
+        }
+
+        // 2. Hàm tìm số nhỏ nhất (MIN)
+        function tinhMin() {
+            let { a, b, c } = layGiaTri();
+            let min = Math.min(a, b, c);
+            hienThiKetQua(min);
+        }
+
+        // 3. Hàm tính sin(a) - Đổi từ độ sang radian trước khi tính
+        function tinhSin() {
+            let { a } = layGiaTri();
+            let radian = a * (Math.PI / 180); 
+            let sin = Math.sin(radian);
+            hienThiKetQua(sin);
+        }
+
+        // 4. Hàm tính Cos(a) - Đổi từ độ sang radian trước khi tính
+        function tinhCos() {
+            let { a } = layGiaTri();
+    
+            let cos = Math.cos(a); 
+            
+            // Nếu đề bài yêu cầu nhập độ (ví dụ 30 độ) thì dùng dòng dưới này thay thế:
+            // let cos = Math.cos(a * (Math.PI / 180));
+            
+            hienThiKetQua(cos);
+        }
+
+        // 5. Hàm tính lũy thừa a^b
+        function tinhLuyThua() {
+            let { a, b } = layGiaTri();
+            let ketQua = Math.pow(a, b);
+            hienThiKetQua(ketQua);
+        }
+    </script>
+
+</body>
+</html>
