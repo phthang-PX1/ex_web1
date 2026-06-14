@@ -1,0 +1,39 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+td {
+    border: 1px solid #999;
+    padding: 4px 8px;
+}
+
+input[type="number"],
+input[type="text"] {
+    border: none;
+    outline: none;
+    width: 250px;
+    font-size: 16px;
+    background: transparent;
+}
+
+#ketQua {
+    color: #000;
+}
+
+.button-group {
+    margin-top: 10px;
+}
+
+button {
+    padding: 4px 12px;
+    margin-right: 5px;
+    background-color: #f0f0f0;
+    border: 1px solid #a6a6a6;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+button:hover {
+    background-color: #e0e0e0;
+}

@@ -1,0 +1,65 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+.container {
+    border: 1px solid #999;
+    padding: 12px;
+    max-width: 760px;
+}
+
+
+.fieldset-row {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 15px;
+}
+
+fieldset {
+    flex: 1;
+    border: 1px solid #999;
+    padding: 8px;
+}
+
+legend {
+    padding: 0 6px;
+    font-weight: bold;
+}
+
+textarea {
+    width: 100%;
+    height: 120px;
+    border: 1px solid #999;
+    padding: 6px;
+    font-size: 15px;
+    resize: vertical;
+}
+
+.btns {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.btns td {
+    border: 1px solid #999;
+    padding: 6px;
+    width: 50%;
+}
+
+button {
+    width: 100%;
+    padding: 4px 12px;
+    background-color: #f0f0f0;
+    border: 1px solid #a6a6a6;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+button:hover {
+    background-color: #e0e0e0;
+}

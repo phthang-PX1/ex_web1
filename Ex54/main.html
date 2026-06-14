@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 54: Hàm toán học</title>
+    <link rel="stylesheet" href="mainstyle.css">
+</head>
+<body>
+
+    <table>
+        <tr>
+            <td>a(So Thu 1):</td>
+            <td><input type="number" id="soA" value="30"></td>
+        </tr>
+        <tr>
+            <td>b(So Thu 2)</td>
+            <td><input type="number" id="soB" value="45"></td>
+        </tr>
+        <tr>
+            <td>c(So Thu 3)</td>
+            <td><input type="number" id="soC" value="90"></td>
+        </tr>
+        <tr>
+            <td>KET QUA</td>
+            <td><input type="text" id="ketQua" readonly></td>
+        </tr>
+    </table>
+
+    <div class="button-group">
+        <button onclick="tinhMax()">MAX</button>
+        <button onclick="tinhMin()">MIN</button>
+        <button onclick="tinhSin()">sin(a)</button>
+        <button onclick="tinhCos()">Cos(a)</button>
+        <button onclick="tinhLuyThua()">a^b</button>
+    </div>
+
+
+    <script>
+        function layGiaTri() {
+            let a = parseFloat(document.getElementById('soA').value) || 0;
+            let b = parseFloat(document.getElementById('soB').value) || 0;
+            let c = parseFloat(document.getElementById('soC').value) || 0;
+            return { a, b, c };
+        }
+
+        function hienThiKetQua(giaTri) {
+            document.getElementById('ketQua').value = giaTri;
+        }
+
+        function tinhMax() {
+            let { a, b, c } = layGiaTri();
+            let max = Math.max(a, b, c);
+            hienThiKetQua(max);
+        }
+
+        function tinhMin() {
+            let { a, b, c } = layGiaTri();
+            let min = Math.min(a, b, c);
+            hienThiKetQua(min);
+        }
+
+        function tinhSin() {
+            let { a } = layGiaTri();
+            let radian = a * (Math.PI / 180); 
+            let sin = Math.sin(radian);
+            hienThiKetQua(sin);
+        }
+
+        function tinhCos() {
+            let { a } = layGiaTri();
+    
+            let cos = Math.cos(a); 
+            
+            
+            hienThiKetQua(cos);
+        }
+
+        function tinhLuyThua() {
+            let { a, b } = layGiaTri();
+            let ketQua = Math.pow(a, b);
+            hienThiKetQua(ketQua);
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 57: Xử lý sự kiện text change</title>
+    <link rel="stylesheet" href="mainstyle.css">
+</head>
+<body>
+    <div class="table-wrapper">
+        <table id="cartTable">
+            <colgroup>
+                <col class="col-code">
+                <col class="col-name">
+                <col class="col-price">
+                <col class="col-quantity">
+                <col class="col-subtotal">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th>Mã sản phẩm</th>
+                    <th>Tên Sản phẩm</th>
+                    <th>Giá</th>
+                    <th>Số lượng</th>
+                    <th>Thành tiền</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="product-row">
+                    <td>C112</td>
+                    <td>Chuột Quang</td>
+                    <td class="price" data-value="10">10$</td>
+                    <td><input type="number" class="quantity" min="0" oninput="tinhThanhTienDong(this)"></td>
+                    <td><input type="text" class="subtotal" readonly></td>
+                </tr>
+                <tr class="product-row">
+                    <td>B124</td>
+                    <td>Bàn Phím</td>
+                    <td class="price" data-value="20">20$</td>
+                    <td><input type="number" class="quantity" min="0" oninput="tinhThanhTienDong(this)"></td>
+                    <td><input type="text" class="subtotal" readonly></td>
+                </tr>
+                <tr class="product-row">
+                    <td>U125</td>
+                    <td>USB KingMax</td>
+                    <td class="price" data-value="15">15$</td>
+                    <td><input type="number" class="quantity" min="0" oninput="tinhThanhTienDong(this)"></td>
+                    <td><input type="text" class="subtotal" readonly></td>
+                </tr>
+                <tr>
+                    <td colspan="5" class="divider-cell"><hr></td>
+                </tr>
+                <tr class="total-row">
+                    <td colspan="4" class="text-right">Total</td>
+                    <td><input type="text" id="totalPrice" readonly></td>
+                </tr>
+                <tr class="action-row">
+                    <td colspan="5" class="button-cell">
+                        <button onclick="tinhTongCong()">TongCong</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

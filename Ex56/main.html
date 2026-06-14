@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 56: Xử lý chuỗi</title>
+    <link rel="stylesheet" href="mainstyle.css">
+</head>
+<body>
+
+    <div class="container">
+        <h2>Sử dụng các hàm xử lý chuỗi</h2>
+
+        <div class="fieldset-row">
+            <fieldset>
+                <legend>Nhập dữ liệu</legend>
+                <textarea id="txtInput"></textarea>
+            </fieldset>
+
+            <fieldset>
+                <legend>Kết quả</legend>
+                <textarea id="txtOutput" readonly></textarea>
+            </fieldset>
+        </div>
+
+        <table class="btns">
+            <tr>
+                <td><button onclick="nhapDuLieu()">Nhập dữ liệu</button></td>
+                <td><button onclick="demKyTuHoa()">Đếm ký tự hoa</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="inChuHoa()">In chữ hoa</button></td>
+                <td><button onclick="inMoiTuTrenMoiDong()">In mỗi từ trên mỗi dòng</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="inChuThuong()">In chữ thường</button></td>
+                <td><button onclick="demSoTu()">Đếm số từ</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="demSoKyTuThuong()">Đếm số ký tự thường</button></td>
+                <td><button onclick="inNguyenAmPhuAm()">In nguyên âm, phụ âm</button></td>
+            </tr>
+            <tr>
+                <td colspan="2"><button onclick="xemW3C()">Xem website xử lý chuỗi W3Schools</button></td>
+            </tr>
+        </table>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
