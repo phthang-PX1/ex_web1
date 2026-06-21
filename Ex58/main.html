@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai 58: Neonatal Feeding Study</title>
+    <link rel="stylesheet" href="mainstyle.css">
+</head>
+<body onload="khoiTaoForm()">
+    <div class="page-wrapper">
+        <div class="logo-row">
+            <img src="Logo.gif" alt="St. Mary's of Northland Pines" class="logo">
+        </div>
+
+        <h1>Neonatal Feeding Study</h1>
+
+        <form>
+            <div class="today-row">
+                <label for="today">Today is:</label>
+                <input type="text" id="today" readonly>
+            </div>
+
+            <div class="form-row">
+                <label>1) Name (first, last):</label>
+                <div class="name-group">
+                    <input type="text" id="firstName">
+                    <input type="text" id="lastName">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <label for="medicalRecord">2) Medical Record #:</label>
+                <input type="text" id="medicalRecord" class="short-input">
+            </div>
+
+            <div class="form-row">
+                <label for="birthDate">3) Date of birth:</label>
+                <input type="text" id="birthDate" class="short-input" placeholder="mm/dd/yyyy">
+            </div>
+
+            <div class="form-row">
+                <label for="physician">4) Physician:</label>
+                <select id="physician" onblur="kiemTraBacSi()">
+                    <option>Dr. Warren Albert</option>
+                    <option>Dr. Ellen Conaway</option>
+                    <option>Dr. Michael Harris</option>
+                    <option value="other">other</option>
+                </select>
+            </div>
+
+            <div class="form-row other-row">
+                <label for="otherPhysician">If other (specify):</label>
+                <input type="text" id="otherPhysician" onblur="kiemTraBacSi()">
+            </div>
+
+            <div class="score-section">
+                <div class="score-label">
+                    <p>5) 1 Minute APGAR Score:</p>
+                    <p>Each score must be 0, 1, or 2</p>
+                </div>
+
+                <div>
+                    <div class="score-row">
+                        <label for="activity">Activity</label>
+                        <input type="text" id="activity" class="score-input" value="0" oninput="tinhTongDiem()" onblur="kiemTraDiem(this)">
+                    </div>
+                    <div class="score-row">
+                        <label for="pulse">Pulse</label>
+                        <input type="text" id="pulse" class="score-input" value="0" oninput="tinhTongDiem()" onblur="kiemTraDiem(this)">
+                    </div>
+                    <div class="score-row">
+                        <label for="grimace">Grimace (Reflex, Irritability)</label>
+                        <input type="text" id="grimace" class="score-input" value="0" oninput="tinhTongDiem()" onblur="kiemTraDiem(this)">
+                    </div>
+                    <div class="score-row">
+                        <label for="appearance">Appearance (Skin Color)</label>
+                        <input type="text" id="appearance" class="score-input" value="0" oninput="tinhTongDiem()" onblur="kiemTraDiem(this)">
+                    </div>
+                    <div class="score-row">
+                        <label for="respiration">Respiration</label>
+                        <input type="text" id="respiration" class="score-input" value="0" oninput="tinhTongDiem()" onblur="kiemTraDiem(this)">
+                    </div>
+                    <div class="score-row total-row">
+                        <label for="totalScore">TOTAL</label>
+                        <input type="text" id="totalScore" class="score-input" value="0" readonly>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-row weight-row">
+                <label for="birthWeight">
+                    6) Birth weight (gms):<br>
+                    <span>Weights must be &gt;= 1200 gms.</span>
+                </label>
+                <input type="text" id="birthWeight" class="short-input">
+            </div>
+
+            <div class="form-row consent-row">
+                <label for="parentalConsent">7) Parental Consent (required):</label>
+                <input type="checkbox" id="parentalConsent">
+            </div>
+
+            <div class="button-row">
+                <button type="button" onclick="dangKy()">Register</button>
+                <button type="button" onclick="taiLaiTrang()">Reload Page</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

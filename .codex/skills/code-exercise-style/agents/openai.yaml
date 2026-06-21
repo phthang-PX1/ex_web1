@@ -1,0 +1,4 @@
+interface:
+  display_name: "Code Exercise Style"
+  short_description: "Consistent HTML/CSS/JS exercise style"
+  default_prompt: "Use $code-exercise-style to implement the current web exercise consistently with the existing repo."

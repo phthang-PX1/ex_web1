@@ -1,0 +1,95 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    font-family: "Times New Roman", Times, serif;
+}
+
+.page-frame {
+    min-height: 100vh;
+    border: 1px solid #03f;
+}
+
+.main-menu,
+.sub-menu {
+    list-style: none;
+}
+
+.main-menu,
+.main-menu > li {
+    display: flex;
+}
+
+.main-menu {
+    align-items: stretch;
+    flex-wrap: nowrap;
+    background: #a7a29c;
+    border-bottom: 1px solid #03f;
+}
+
+.main-menu > li {
+    position: relative;
+    flex: 1 1 0;
+    min-width: 0;
+}
+
+.main-menu a,
+.sub-link {
+    display: block;
+    padding: 12px 10px 13px;
+    color: #000;
+    font: 700 clamp(16px, 1.35vw, 26px) / 1 "Times New Roman", Times, serif;
+    text-align: center;
+    text-decoration: none;
+}
+
+.main-menu a {
+    width: 100%;
+}
+
+.main-menu > li:hover > a,
+.main-menu a:hover,
+.sub-link:is(:hover, .active) {
+    background: #ffae00;
+}
+
+.sub-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 190px;
+    width: 100%;
+    background: #fff;
+    border-inline: 1px solid #0a0;
+    display: none;
+    z-index: 2;
+}
+
+.menu-css:hover > .sub-menu,
+.menu-js.open > .sub-menu {
+    display: block;
+}
+
+.sub-link {
+    border-block: 1px solid #0a0;
+}
+
+@media (max-width: 900px) {
+    .main-menu {
+        flex-wrap: wrap;
+    }
+
+    .main-menu > li {
+        flex-basis: 25%;
+    }
+}
+
+@media (max-width: 560px) {
+    .main-menu > li {
+        flex-basis: 50%;
+    }
+}

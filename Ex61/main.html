@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai 61: Color Picker</title>
+    <link rel="stylesheet" href="mainstyle.css">
+</head>
+<body>
+    <div class="page-frame">
+        <h1>A Simple Color Picker</h1>
+
+        <div class="panel-row">
+            <section>
+                <p>Background (enter values from '00' to 'FF')</p>
+                <div class="color-row">
+                    <label for="bgRed">RED:</label>
+                    <input type="text" id="bgRed" value="FF" maxlength="2">
+                    <label for="bgGreen">GREEN:</label>
+                    <input type="text" id="bgGreen" value="FF" maxlength="2">
+                    <label for="bgBlue">BLUE:</label>
+                    <input type="text" id="bgBlue" value="FF" maxlength="2">
+                </div>
+
+                <p>Text (enter values from '00' to 'FF')</p>
+                <div class="color-row">
+                    <label for="textRed">RED:</label>
+                    <input type="text" id="textRed" value="00" maxlength="2">
+                    <label for="textGreen">GREEN:</label>
+                    <input type="text" id="textGreen" value="00" maxlength="2">
+                    <label for="textBlue">BLUE:</label>
+                    <input type="text" id="textBlue" value="00" maxlength="2">
+                </div>
+
+                <div class="button-row">
+                    <button type="button" onclick="apDungMau()">Apply</button>
+                    <button type="button" onclick="taiLaiTrang()">Reload</button>
+                </div>
+            </section>
+
+            <section id="previewPanel">
+                <h2>HAMLET:</h2>
+                <p>
+                    Speak the speech, I pray you, as I pronounced it to you, trippingly on the
+                    tongue; but if you mouth it, as many of your players do, I had as lief the
+                    town-crier spoke my lines.
+                </p>
+            </section>
+        </div>
+
+        <p class="note">*If you are using Netscape, you won't be able to change the text color.</p>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
