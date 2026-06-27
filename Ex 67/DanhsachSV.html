@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Bài 67</title>
+
+<script type="text/javascript">
+
+var data =
+"<sinhviens>" +
+    "<sinhvien>" +
+        "<mssv>K123456789</mssv>" +
+        "<hoTen>Quách Thị Bán Bún Bò</hoTen>" +
+        "<ngaySinh>7/7/1997</ngaySinh>" +
+        "<gioiTinh>Nữ</gioiTinh>" +
+    "</sinhvien>" +
+
+    "<sinhvien>" +
+        "<mssv>K12345000</mssv>" +
+        "<hoTen>Hồng Lâu Mộng</hoTen>" +
+        "<ngaySinh>2/2/1992</ngaySinh>" +
+        "<gioiTinh>Nam</gioiTinh>" +
+    "</sinhvien>" +
+
+    "<sinhvien>" +
+        "<mssv>K1674000</mssv>" +
+        "<hoTen>Hồ Văn Đồ</hoTen>" +
+        "<ngaySinh>2/7/1997</ngaySinh>" +
+        "<gioiTinh>Nam</gioiTinh>" +
+    "</sinhvien>" +
+"</sinhviens>";
+
+var dsSinhVien = [];
+var tangDan = true;
+
+function loadData()
+{
+    var parser = new DOMParser();
+    var xmlDoc = parser.parseFromString(data,"text/xml");
+
+    var sinhviens = xmlDoc.getElementsByTagName("sinhvien");
+
+    for(var i=0;i<sinhviens.length;i++)
+    {
+        var sv = {};
+
+        sv.mssv =
+        sinhviens[i].getElementsByTagName("mssv")[0]
+        .childNodes[0].nodeValue;
+
+        sv.hoten =
+        sinhviens[i].getElementsByTagName("hoTen")[0]
+        .childNodes[0].nodeValue;
+
+        sv.ngaysinh =
+        sinhviens[i].getElementsByTagName("ngaySinh")[0]
+        .childNodes[0].nodeValue;
+
+        sv.gioitinh =
+        sinhviens[i].getElementsByTagName("gioiTinh")[0]
+        .childNodes[0].nodeValue;
+
+        dsSinhVien.push(sv);
+    }
+
+    hienThiDanhSach();
+}
+
+function hienThiDanhSach()
+{
+    var tbody = document.getElementById("svbody");
+
+    tbody.innerHTML = "";
+
+    for(var i=0;i<dsSinhVien.length;i++)
+    {
+        var tr = document.createElement("tr");
+
+        tr.onmouseover = function()
+        {
+            this.style.backgroundColor = "yellow";
+        }
+
+        tr.onmouseout = function()
+        {
+            this.style.backgroundColor = "white";
+        }
+
+        tr.onclick = (function(sv)
+        {
+            return function()
+            {
+                hienThiChiTiet(sv);
+            }
+        })(dsSinhVien[i]);
+
+        var td1 = document.createElement("td");
+        td1.innerHTML = dsSinhVien[i].mssv;
+        tr.appendChild(td1);
+
+        var td2 = document.createElement("td");
+        td2.innerHTML = dsSinhVien[i].hoten;
+        tr.appendChild(td2);
+
+        var td3 = document.createElement("td");
+        td3.innerHTML = dsSinhVien[i].ngaysinh;
+        tr.appendChild(td3);
+
+        var td4 = document.createElement("td");
+        td4.innerHTML = dsSinhVien[i].gioitinh;
+        tr.appendChild(td4);
+
+        tbody.appendChild(tr);
+    }
+}
+
+function hienThiChiTiet(sv)
+{
+    document.getElementById("ct_mssv").innerHTML = sv.mssv;
+    document.getElementById("ct_hoten").innerHTML = sv.hoten;
+    document.getElementById("ct_ngaysinh").innerHTML = sv.ngaysinh;
+    document.getElementById("ct_gioitinh").innerHTML = sv.gioitinh;
+
+    document.getElementById("pageList").style.display = "none";
+    document.getElementById("pageDetail").style.display = "block";
+}
+
+function quayLai()
+{
+    document.getElementById("pageList").style.display = "block";
+    document.getElementById("pageDetail").style.display = "none";
+}
+
+function sapXepTheoTen()
+{
+    if(tangDan)
+    {
+        dsSinhVien.sort(function(a,b)
+        {
+            return a.hoten.localeCompare(b.hoten);
+        });
+
+        tangDan = false;
+    }
+    else
+    {
+        dsSinhVien.sort(function(a,b)
+        {
+            return b.hoten.localeCompare(a.hoten);
+        });
+
+        tangDan = true;
+    }
+
+    hienThiDanhSach();
+}
+
+</script>
+
+</head>
+
+<body onload="loadData()">
+
+<div id="pageList">
+    <table border="1" align="center" width="700">
+    <tr bgcolor="gold">
+        <td colspan="4">
+            DANH SÁCH SINH VIÊN
+        </td>
+    </tr>
+    <tr style="background-color: green; color: white;">
+        <td>Mã Sinh Viên</td>
+        <td onclick="sapXepTheoTen()"
+            style="cursor:pointer">
+            Họ Tên
+        </td>
+        <td>Ngày Sinh</td>
+        <td>Giới Tính</td>
+    </tr>
+    <tbody id="svbody">
+    </tbody>
+    </table>
+
+</div>
+
+<div id="pageDetail" style="display:none">
+
+    <table border="1" align="center" width="500">
+        <tr bgcolor="gold">
+            <th colspan="2">CHI TIẾT THÔNG TIN SINH VIÊN</th>
+        </tr>
+        <tr>
+            <td>Mã Sinh Viên</td>
+            <td id="ct_mssv"></td>
+        </tr>
+        <tr>
+            <td>Họ Tên</td>
+            <td id="ct_hoten"></td>
+        </tr>
+        <tr>
+            <td>Ngày Sinh</td>
+            <td id="ct_ngaysinh"></td>
+        </tr>
+        <tr>
+            <td>Giới Tính</td>
+            <td id="ct_gioitinh"></td>
+        </tr>
+    </table>
+
+    <br>
+
+    <div align="center">
+        <button onclick="quayLai()">
+            Quay lại danh sách
+        </button>
+    </div>
+
+</div>
+
+</body>
+</html>
