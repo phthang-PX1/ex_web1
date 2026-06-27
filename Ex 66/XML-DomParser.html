@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Bài 66: XML-Dom Parser</title>
+
+    <script type="text/javascript">
+
+        var data =
+        "<sinhvien>" +
+            "<mssv>K123456789</mssv>" +
+            "<hoTen>Quách Thị Bán Bún Bò</hoTen>" +
+            "<ngaySinh>7/7/1997</ngaySinh>" +
+            "<gioiTinh>Nữ</gioiTinh>" +
+        "</sinhvien>";
+
+        function loadData()
+        {
+            // Tạo đối tượng DOMParser
+            var parser = new DOMParser();
+
+            // Chuyển chuỗi XML thành XML Document
+            var xmlDoc = parser.parseFromString(data, "text/xml");
+
+            // Đọc dữ liệu XML
+            var mssv = xmlDoc.getElementsByTagName("mssv")[0]
+                             .childNodes[0].nodeValue;
+
+            var hoten = xmlDoc.getElementsByTagName("hoTen")[0]
+                              .childNodes[0].nodeValue;
+
+            var ngaysinh = xmlDoc.getElementsByTagName("ngaySinh")[0]
+                                 .childNodes[0].nodeValue;
+
+            var gioitinh = xmlDoc.getElementsByTagName("gioiTinh")[0]
+                                 .childNodes[0].nodeValue;
+
+            // Hiển thị lên table
+            document.getElementById("mssv").innerText = mssv;
+            document.getElementById("hoten").innerText = hoten;
+            document.getElementById("ngaysinh").innerText = ngaysinh;
+            document.getElementById("gioitinh").innerText = gioitinh;
+        }
+
+        function mouseOverRow(tr)
+        {
+            tr.style.backgroundColor = "blue";
+            tr.style.color = "white";
+        }
+
+        function mouseOutRow(tr)
+        {
+            tr.style.backgroundColor = "white";
+            tr.style.color = "black";
+        }
+
+    </script>
+</head>
+
+<body onload="loadData()">
+
+    <table border="1" width="600" align="center">
+        <tr bgcolor="gold">
+            <th colspan="2">
+                Chi tiết thông tin Sinh Viên
+            </th>
+        </tr>
+
+        <tr onmouseover="mouseOverRow(this)"
+            onmouseout="mouseOutRow(this)">
+            <td>Mã Sinh Viên</td>
+            <td id="mssv"></td>
+        </tr>
+
+        <tr onmouseover="mouseOverRow(this)"
+            onmouseout="mouseOutRow(this)">
+            <td>Họ tên</td>
+            <td id="hoten"></td>
+        </tr>
+
+        <tr onmouseover="mouseOverRow(this)"
+            onmouseout="mouseOutRow(this)">
+            <td>Ngày Sinh</td>
+            <td id="ngaysinh"></td>
+        </tr>
+
+        <tr onmouseover="mouseOverRow(this)"
+            onmouseout="mouseOutRow(this)">
+            <td>Giới Tính</td>
+            <td id="gioitinh"></td>
+        </tr>
+
+    </table>
+
+</body>
+</html>
