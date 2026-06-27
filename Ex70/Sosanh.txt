@@ -1,0 +1,84 @@
+======================================================================
+              TÌM HIỂU VỀ CẤU TRÚC JSON VÀ SO SÁNH VỚI XML
+======================================================================
+
+1. CẤU TRÚC CỦA JSONOBJECT VÀ JSONARRAY
+----------------------------------------------------------------------
+JSON (JavaScript Object Notation) được xây dựng dựa trên hai cấu trúc:
+
+A. JsonObject (Đối tượng JSON)
+   * Định nghĩa: Tập hợp không thứ tự của các cặp khóa/giá trị (key/value).
+   * Ký hiệu: Bắt đầu bằng '{' và kết thúc bằng '}'.
+   * Quy tắc:
+     - Khóa (key) bắt buộc phải là chuỗi đặt trong dấu nháy kép "".
+     - Giữa khóa và giá trị ngăn cách bằng dấu hai chấm (:).
+     - Các cặp khóa/giá trị ngăn cách nhau bằng dấu phẩy (,).
+
+   * Ví dụ về JsonObject:
+     {
+       "ten": "Nguyen Van A",
+       "tuoi": 25,
+       "laSinhVien": true
+     }
+
+B. JsonArray (Mảng JSON)
+   * Định nghĩa: Danh sách các giá trị có thứ tự.
+   * Ký hiệu: Bắt đầu bằng '[' và kết thúc bằng ']'.
+   * Quy tắc:
+     - Các giá trị ngăn cách nhau bằng dấu phẩy (,).
+     - Mảng có thể chứa nhiều kiểu dữ liệu (số, chuỗi, boolean, object...)
+
+   * Ví dụ về JsonArray:
+     [
+       "Lap trinh Java",
+       "Lap trinh Python",
+       1024,
+       {"khoaHoc": "Web", "thoiGian": "3 thang"}
+     ]
+
+
+2. BẢNG SO SÁNH SỰ KHÁC BIỆT GIỮA JSON VÀ XML
+----------------------------------------------------------------------
++-------------------+---------------------------+---------------------------+
+| Tieu chi          | JSON                      | XML                       |
++-------------------+---------------------------+---------------------------+
+| Cu phap           | Dung { }, [ ], : ,        | Dung cac the dong/mo dang |
+|                   | Gon gang, it ky tu thua.  | <tag>...</tag>. Cong kenh |
++-------------------+---------------------------+---------------------------+
+| Kieu du lieu      | Ho tro: String, Number,   | Tat ca la Chuoi (String). |
+|                   | Boolean, Array, Object... | Phai tu ep kieu khi doc.  |
++-------------------+---------------------------+---------------------------+
+| Do de doc         | De doc, tuong minh, gan   | Doc duoc nhung de roi mat |
+|                   | gui voi ngon ngu laptrinh | khi long nhau qua sau.    |
++-------------------+---------------------------+---------------------------+
+| Toc do Parsing    | Nhanh hon, ton it RAM/CPU | Cham hon vi phai xu ly    |
+|                   | cua thiet bi.             | cau truc the phuc tap.    |
++-------------------+---------------------------+---------------------------+
+| Kich thuoc        | Nhe, toi uu dung luong    | Nang hon do phai lap lai  |
+|                   | truyen tai qua mang.      | cac the dong va mo.       |
++-------------------+---------------------------+---------------------------+
+| Kha nang mo rong  | Tot, nhung khong co tieu  | Rat manh. Ho tro Schema   |
+|                   | chuan kiem tra nghiem ngat| (XSD) de check hop le.    |
++-------------------+---------------------------+---------------------------+
+| Ung dung          | Web API (RESTful), Mobile | Ngan hang, He thong lon,  |
+|                   | App, file cau hinh moi.   | Viettel, SOAP API...      |
++-------------------+---------------------------+---------------------------+
+
+
+3. VÍ DỤ TRỰC QUAN SO SÁNH
+----------------------------------------------------------------------
+[Dạng JSON]
+{
+  "nhanVien": {
+    "ten": "Tran Van B",
+    "chucVu": "Developer"
+  }
+}
+
+[Dạng XML]
+<nhanVien>
+    <ten>Tran Van B</ten>
+    <chucVu>Developer</chucVu>
+</nhanVien>
+
+======================================================================
