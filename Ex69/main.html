@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ex69 Employee List</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+</head>
+<body>
+
+  <div class="filter-row">
+    <label>Chọn Title: </label>
+    <select id="titleSelect" onchange="filterByTitle()">
+      <!-- Các option sẽ được thêm động bằng JavaScript -->
+    </select>
+  </div>
+
+  <table id="empTable" style="display:none;">
+    <tr>
+      <th>Mã Employee</th>
+      <th>Tên Employee</th>
+      <th>Phone Employee</th>
+    </tr>
+  </table>
+
+  
+</body>
+</html>
