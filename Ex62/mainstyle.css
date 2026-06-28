@@ -1,0 +1,27 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+.trigger-table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #000;
+}
+
+.trigger-table th, .trigger-table td {
+    border: 1px solid #000;
+    padding: 6px 10px;
+    text-align: left;
+}
+
+/* Hàng đầu tiên màu đỏ */
+.header-row {
+    background-color: red;
+}
+
+/* Các hàng dữ liệu mặc định màu xanh */
+.trigger-table tbody tr {
+    background-color: blue;
+    cursor: pointer;
+}

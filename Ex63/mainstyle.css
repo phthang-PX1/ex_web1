@@ -1,0 +1,78 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #fff;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.form-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.form-table td {
+    padding: 6px 8px;
+}
+
+.label-col {
+    width: 180px;
+}
+
+input[type="text"] {
+    width: 250px;
+    padding: 4px;
+    border: 1px solid #ccc;
+}
+
+select {
+    padding: 3px;
+}
+
+.color-badge {
+    padding: 1px 6px;
+}
+
+.blue { background-color: blue; color: white; }
+.red { background-color: red; color: white; }
+.yellow { background-color: yellow; color: black; }
+.green { background-color: green; color: white; }
+.purple { background-color: purple; color: white; }
+
+.button-group button {
+    padding: 4px 12px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    border: 1px solid #000;
+}
+
+.data-table th, .data-table td {
+    border: 1px solid #000;
+    padding: 6px 8px;
+    text-align: left;
+}
+
+.data-table th {
+    background-color: blue;
+    color: white;
+}
+
+.data-table tbody tr {
+    background-color: white;
+    cursor: pointer;
+}
