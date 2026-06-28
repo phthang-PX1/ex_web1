@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 63: Đăng ký thành viên</title>
+    <link rel="stylesheet" href="mainstyle.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Đăng ký thành viên</h1>
+        <hr>
+
+        <form id="regForm">
+            <table class="form-table">
+                <tr>
+                    <td class="label-col">Tên(*)</td>
+                    <td><input type="text" id="ten"></td>
+                </tr>
+                <tr>
+                    <td class="label-col">Ngày sinh(*)</td>
+                    <td>
+                        Ngày: <select id="ngay"></select>
+                        Tháng: <select id="thang"></select>
+                        Năm: <select id="nam"></select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label-col">Giới tính(*)</td>
+                    <td>
+                        <label><input type="radio" name="gioiTinh" value="Nam" checked> Nam</label>
+                        <label><input type="radio" name="gioiTinh" value="Nữ"> Nữ</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label-col">Email(*)</td>
+                    <td><input type="text" id="email"></td>
+                </tr>
+                <tr>
+                    <td class="label-col" style="vertical-align: top;">Sở thích của bạn:</td>
+                    <td>
+                        <label><input type="checkbox" name="soThich" value="Mua sắm"> Mua sắm</label><br>
+                        <label><input type="checkbox" name="soThich" value="Du lịch"> Du lịch</label><br>
+                        <label><input type="checkbox" name="soThich" value="Tán gẫu"> Tán gẫu</label><br>
+                        <label><input type="checkbox" name="soThich" value="Đọc sách"> Đọc sách</label><br>
+                        <label><input type="checkbox" name="soThich" value="Nghe nhạc"> Nghe nhạc</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label-col" style="vertical-align: top;">Màu yêu thích của bạn:</td>
+                    <td>
+                        <label><input type="radio" name="mauYeuThich" value="Màu xanh da trời" checked> <span class="color-badge blue">Màu xanh da trời</span></label><br>
+                        <label><input type="radio" name="mauYeuThich" value="Màu đỏ"> <span class="color-badge red">Màu đỏ</span></label><br>
+                        <label><input type="radio" name="mauYeuThich" value="Màu vàng"> <span class="color-badge yellow">Màu vàng</span></label><br>
+                        <label><input type="radio" name="mauYeuThich" value="Màu xanh lá cây"> <span class="color-badge green">Màu xanh xanh lá cây</span></label><br>
+                        <label><input type="radio" name="mauYeuThich" value="Màu xanh tím"> <span class="color-badge purple">Màu xanh tím</span></label>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="button-group">
+                        <button type="button" onclick="dangKy()">Đăng ký</button>
+                        <button type="button" onclick="tiepTuc()">Tiếp</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+
+        <br>
+
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>Tên</th>
+                    <th>Email</th>
+                    <th>Giới tính</th>
+                    <th>Năm sinh</th>
+                    <th>Sở thích</th>
+                    <th>Màu yêu thích</th>
+                </tr>
+            </thead>
+            <tbody id="tableBody">
+                <tr onmouseover="rowOver(this)" onmouseout="rowOut(this)">
+                    <td>Nguyễn Văn Bình</td>
+                    <td>binh@gmail.com</td>
+                    <td>Nam</td>
+                    <td>02/02/1990</td>
+                    <td>đọc sách</td>
+                    <td>Màu vàng</td>
+                </tr>
+                <tr onmouseover="rowOver(this)" onmouseout="rowOut(this)">
+                    <td>Nguyễn Thị An</td>
+                    <td>nguyenthian@gmail.com</td>
+                    <td>Nữ</td>
+                    <td>01/01/1992</td>
+                    <td>Tán gẫu, đọc sách</td>
+                    <td>Màu đỏ</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
