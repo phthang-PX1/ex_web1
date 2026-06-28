@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 62: Table Mouse Trigger</title>
+    <link rel="stylesheet" href="mainstyle.css">
+</head>
+<body>
+
+    <table class="trigger-table">
+        <thead>
+            <tr class="header-row">
+                <th>STT</th>
+                <th>Tên</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr onmouseover="toNenVang(this)" onmouseleave="toNenXanh(this)">
+                <td>1</td>
+                <td>Nguyễn Thị Tự</td>
+            </tr>
+            <tr onmouseover="toNenVang(this)" onmouseleave="toNenXanh(this)">
+                <td>2</td>
+                <td>Trần Văn Kỳ</td>
+            </tr>
+            <tr onmouseover="toNenVang(this)" onmouseleave="toNenXanh(this)">
+                <td>3</td>
+                <td>Hồ Văn Nặng</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
